@@ -18,12 +18,12 @@
 
     <figure>
         <img
-            src="#"
-            alt="le nom de l'image"
+            src="/TomTroc-Project/public/img/hero.png"
+            alt="Librairie avec de nombreux livres"
         >
 
         <figcaption>
-            nom d'un user
+            Hamza
         </figcaption>
     </figure>
 </section>

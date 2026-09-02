@@ -1,98 +1,199 @@
-/* Remise à zéro des marges et paddings */
+/* On enlève les marges par défaut du navigateur */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Conteneur principal du site */
+
+/* Conteneur principal pour centrer le contenu */
 .container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 32px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
 }
+
 
 /* Style général de la page */
 body {
-	font-family: Arial, sans-serif;
-	color: #292929;
-	background-color: #f5f3ef;
+    font-family: Arial, sans-serif;
+    color: #292929;
+    background-color: #f5f3ef;
 }
+
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
 
 /* Barre de navigation */
 nav {
-	height: 80px;
-	width: 100%;
+    height: 80px;
+    width: 100%;
 
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-/* Style général des liens du menu */
+
+/* Style de base des liens */
 nav a {
-	text-decoration: none;
-	color: #292929;
-	font-size: 14px;
+    text-decoration: none;
+    color: #292929;
+    font-size: 14px;
 }
+
 
 /* Logo */
 nav > a:first-child {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 
-	margin-right: 75px;
+    margin-right: 75px;
 }
 
+
+/* Taille du logo */
 nav > a:first-child img {
-	width: 155px;
-	height: auto;
-	display: block;
+    width: 155px;
+    height: auto;
+    display: block;
 }
 
-/* Menu principal : Accueil et livres */
+
+/* Partie gauche du menu */
 nav > div:first-of-type {
-	display: flex;
-	align-items: center;
-	gap: 45px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
 }
 
-/* Accueil est un peu plus visible */
+
+/* Accueil un peu plus visible */
 nav > div:first-of-type a:first-child {
-	font-weight: 600;
+    font-weight: 600;
 }
+
 
 /* Partie droite du menu */
 nav > div:last-of-type {
-	margin-left: auto;
+    margin-left: auto;
 
-	display: flex;
-	align-items: center;
-	gap: 45px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
 
-	padding-left: 55px;
-	border-left: 1px solid #e5e5e5;
+    padding-left: 55px;
+    border-left: 1px solid #e5e5e5;
 }
 
-/* Alignement des icônes avec le texte */
+
+/* Aligne les icônes avec le texte */
 nav > div:last-of-type a {
-	display: flex;
-	align-items: center;
-	gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
+
 
 /* Petit rond avec le nombre de messages */
 nav > div:last-of-type a:first-child span:last-child {
-	width: 15px;
-	height: 15px;
+    width: 15px;
+    height: 15px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	background-color: #292929;
-	color: white;
+    background-color: #292929;
+    color: white;
 
-	border-radius: 50%;
-	font-size: 9px;
+    border-radius: 50%;
+    font-size: 9px;
+}
+
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+
+/* Première section de la page d'accueil */
+main section:first-child {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 90px;
+}
+
+
+/* Bloc avec le titre, le texte et le bouton */
+main section:first-child > div {
+    width: 320px;
+}
+
+
+/* Titre principal */
+main section:first-child h1 {
+    margin-bottom: 20px;
+
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+
+/* Texte sous le titre */
+main section:first-child p {
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* Bouton Découvrir */
+main section:first-child > div > a {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background-color: #00ac66;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Bloc de l'image */
+main section:first-child figure {
+    width: 405px;
+}
+
+
+/* Image principale du hero */
+main section:first-child figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Petit crédit sous l'image */
+main section:first-child figcaption {
+    margin-top: 8px;
+
+    text-align: right;
+
+    font-size: 10px;
+    color: #a6a6a6;
 }
