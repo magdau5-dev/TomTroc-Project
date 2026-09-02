@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Tom Troc</title>
+    <title>Tom Troc</title>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <link rel="stylesheet" href="/TomTroc-Project/style.css?v=5">
+</head>
 
-    <body>
+<body>
 
-        <?php require_once __DIR__ . '/src/views/layouts/main.php'; ?>
+    <?php require_once __DIR__ . '/src/views/layouts/main.php'; ?>
 
-    </body>
+</body>
+
 </html>

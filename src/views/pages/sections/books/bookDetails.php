@@ -12,10 +12,7 @@
 
         <div class="book-details-image">
 
-            <img
-                src="/TomTroc-Project/public/img/kinfolk-table.png"
-                alt="The Kinfolk Table"
-            >
+           <!-- L'image du livre bdd -->
 
         </div>
 

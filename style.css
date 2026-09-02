@@ -61,7 +61,6 @@ nav > a:first-child {
 nav > a:first-child img {
 	width: 155px;
 	height: auto;
-
 	display: block;
 }
 
@@ -69,7 +68,6 @@ nav > a:first-child img {
 nav > div:first-of-type {
 	display: flex;
 	align-items: center;
-
 	gap: 45px;
 }
 
@@ -96,7 +94,6 @@ nav > div:last-of-type {
 nav > div:last-of-type a {
 	display: flex;
 	align-items: center;
-
 	gap: 5px;
 }
 
@@ -124,7 +121,6 @@ nav > div:last-of-type a:first-child span:last-child {
 /* Première section de la page */
 .hero {
 	width: 100%;
-
 	background-color: #f5f3ef;
 }
 
@@ -188,7 +184,6 @@ nav > div:last-of-type a:first-child span:last-child {
 .hero-image img {
 	width: 100%;
 	height: auto;
-
 	display: block;
 }
 
@@ -433,123 +428,268 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Pied de page */
 .footer {
-    width: 100%;
-    height: 61px;
+	width: 100%;
+	height: 61px;
 
-    background-color: #ffffff;
+	background-color: #ffffff;
 }
-
 
 /* Contenu du footer */
 .footer-content {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 
-    gap: 35px;
+	gap: 35px;
 
-    padding: 0 46px;
+	padding: 0 46px;
 }
-
 
 /* Liens du footer */
 .footer-content a {
-    font-family: Inter, sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+	font-family: Inter, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
 
-    color: #292929;
-    text-decoration: none;
+	color: #292929;
+	text-decoration: none;
 }
-
 
 /* Texte Tom Troc */
 .footer-content span {
-    font-family: Inter, sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+	font-family: Inter, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
 
-    color: #292929;
+	color: #292929;
 }
-
 
 /* Petit logo */
 .footer-content img {
-    width: 22px;
-    height: auto;
+	width: 22px;
+	height: auto;
 
-    display: block;
+	display: block;
 }
-
 
 /* ========================= */
 /* PAGE LIVRES */
 /* ========================= */
 
-
 /* Page avec tous les livres disponibles */
 .books-page {
-    width: 100%;
-    padding: 80px 0;
+	width: 100%;
 
-    background-color: #f5f3ef;
+	padding: 80px 0;
+
+	background-color: #f5f3ef;
 }
-
 
 /* Titre et barre de recherche */
 .books-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-    margin-bottom: 60px;
+	margin-bottom: 60px;
 }
-
 
 /* Titre de la page */
 .books-header h1 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 36px;
-    font-weight: 400;
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 36px;
+	font-weight: 400;
 
-    color: #292929;
+	color: #292929;
 }
-
 
 /* Champ de recherche */
 .books-header input {
-    width: 320px;
-    height: 48px;
+	width: 320px;
+	height: 48px;
 
-    padding: 0 16px;
+	padding: 0 16px;
 
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
+	border: 1px solid #e5e5e5;
+	border-radius: 6px;
 
-    font-family: Inter, sans-serif;
-    font-size: 14px;
+	font-family: Inter, sans-serif;
+	font-size: 14px;
 
-    background-color: #ffffff;
+	background-color: #ffffff;
 }
-
 
 /* Grille des livres */
 .books-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 
-    gap: 40px 30px;
+	gap: 40px 30px;
 }
-
 
 /* Emplacement d'une future carte de livre */
 .books-grid article {
-    height: 360px;
+	height: 360px;
 
-    background-color: #ffffff;
+	background-color: #ffffff;
 
-    border-radius: 8px;
+	border-radius: 8px;
 }
+
+/* ========================= */
+/* DÉTAIL D'UN LIVRE */
+/* ========================= */
+
+/* Page de détail d'un livre */
+.book-details {
+	width: 100%;
+
+	background-color: #f5f3ef;
+}
+
+/* Petit chemin au-dessus du livre */
+.book-details-breadcrumb {
+	padding: 20px 0;
+
+	font-size: 12px;
+	color: #a6a6a6;
+}
+
+/* Partie principale avec l'image et les informations */
+.book-details-content {
+	display: flex;
+
+	width: 100%;
+}
+
+/* Zone réservée à l'image du livre */
+.book-details-image {
+	width: 50%;
+	min-height: 700px;
+
+	background-color: #e9e7e2;
+}
+
+/* Si une image est ajoutée plus tard */
+.book-details-image img {
+	width: 100%;
+	height: 100%;
+
+	display: block;
+
+	object-fit: cover;
+}
+
+/* Partie droite avec les informations */
+.book-details-info {
+	width: 50%;
+
+	padding: 70px 80px;
+
+	background-color: #f5f3ef;
+}
+
+/* Titre du livre */
+.book-details-info h1 {
+	margin-bottom: 15px;
+
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 36px;
+	font-weight: 400;
+
+	color: #292929;
+}
+
+/* Auteur du livre */
+.book-details-author {
+	margin-bottom: 30px;
+
+	font-size: 16px;
+	font-weight: 300;
+
+	color: #a6a6a6;
+}
+
+/* Petite ligne sous l'auteur */
+.book-details-info hr {
+	width: 28px;
+
+	margin-bottom: 30px;
+
+	border: none;
+	border-top: 1px solid #a6a6a6;
+}
+
+/* Petits titres DESCRIPTION et PROPRIÉTAIRE */
+.book-details-info h2 {
+	margin-bottom: 20px;
+
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+/* Paragraphes de description */
+.book-details-info > p:not(.book-details-author) {
+	margin-bottom: 18px;
+
+	font-size: 14px;
+	line-height: 1.35;
+
+	color: #292929;
+}
+
+/* Bloc avec le propriétaire */
+.book-details-owner {
+	width: fit-content;
+
+	display: flex;
+	align-items: center;
+
+	gap: 12px;
+
+	margin-bottom: 60px;
+
+	padding: 6px 12px 6px 6px;
+
+	background-color: #ffffff;
+
+	border-radius: 40px;
+
+	text-decoration: none;
+	color: #292929;
+}
+
+/* Photo du propriétaire */
+.book-details-owner img {
+	width: 48px;
+	height: 48px;
+
+	border-radius: 50%;
+
+	object-fit: cover;
+}
+
+/* Bouton Envoyer un message */
+.book-details-message {
+	width: 100%;
+	height: 63px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #00ac66;
+	color: #ffffff;
+
+	text-decoration: none;
+
+	border-radius: 10px;
+
+	font-size: 16px;
+	font-weight: 600;
+}
+
