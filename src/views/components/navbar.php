@@ -1,4 +1,5 @@
 <nav>
+
     <?php require_once __DIR__ . '/logo.php'; ?>
 
     <div>
@@ -22,4 +23,5 @@
             Connexion
         </a>
     </div>
+
 </nav>

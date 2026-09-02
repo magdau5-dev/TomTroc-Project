@@ -1,65 +1,87 @@
-.container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 32px;
-	box-sizing: border-box;
-}
-
+/* Remise à zéro des marges et paddings */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-body {
-	background-color: #f5f3ef;
-	font-family: Arial, sans-serif;
+/* Conteneur principal du site */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 32px;
 }
 
+/* Style général de la page */
+body {
+	font-family: Arial, sans-serif;
+	color: #292929;
+	background-color: #f5f3ef;
+}
+
+/* Barre de navigation */
 nav {
 	height: 80px;
+	width: 100%;
+
 	display: flex;
 	align-items: center;
 }
 
-nav > a:first-child {
-	margin-right: 80px;
-	text-decoration: none;
-}
-
-nav > div {
-	display: flex;
-	align-items: center;
-}
-
-nav > div:first-of-type {
-	gap: 45px;
-}
-
-nav > div:last-of-type {
-	margin-left: auto;
-	gap: 45px;
-	padding-left: 55px;
-	border-left: 1px solid #e5e5e5;
-}
-
+/* Style général des liens du menu */
 nav a {
 	text-decoration: none;
 	color: #292929;
 	font-size: 14px;
 }
 
+/* Logo */
+nav > a:first-child {
+	display: flex;
+	align-items: center;
+
+	margin-right: 75px;
+}
+
+nav > a:first-child img {
+	width: 155px;
+	height: auto;
+	display: block;
+}
+
+/* Menu principal : Accueil et livres */
+nav > div:first-of-type {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+}
+
+/* Accueil est un peu plus visible */
 nav > div:first-of-type a:first-child {
 	font-weight: 600;
 }
 
+/* Partie droite du menu */
+nav > div:last-of-type {
+	margin-left: auto;
+
+	display: flex;
+	align-items: center;
+	gap: 45px;
+
+	padding-left: 55px;
+	border-left: 1px solid #e5e5e5;
+}
+
+/* Alignement des icônes avec le texte */
 nav > div:last-of-type a {
 	display: flex;
 	align-items: center;
 	gap: 5px;
 }
 
+/* Petit rond avec le nombre de messages */
 nav > div:last-of-type a:first-child span:last-child {
 	width: 15px;
 	height: 15px;
@@ -68,15 +90,9 @@ nav > div:last-of-type a:first-child span:last-child {
 	align-items: center;
 	justify-content: center;
 
-	border-radius: 50%;
 	background-color: #292929;
 	color: white;
 
+	border-radius: 50%;
 	font-size: 9px;
-}
-
-nav > a img {
-    width: 155px;
-    height: auto;
-    display: block;
 }
