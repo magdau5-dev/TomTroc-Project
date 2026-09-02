@@ -383,3 +383,61 @@ nav > div:last-of-type a:first-child span:last-child {
 
 	color: #a6a6a6;
 }
+
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+
+/* Pied de page */
+.footer {
+    width: 100%;
+    height: 61px;
+
+    background-color: #ffffff;
+}
+
+
+/* Contenu du footer */
+.footer-content {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 35px;
+
+    padding: 0 46px;
+}
+
+
+/* Liens du footer */
+.footer-content a {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+
+    color: #292929;
+    text-decoration: none;
+}
+
+
+/* Texte Tom Troc */
+.footer-content span {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+
+    color: #292929;
+}
+
+
+/* Petit logo à droite */
+.footer-content img {
+    width: 22px;
+    height: auto;
+
+    display: block;
+}
