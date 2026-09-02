@@ -1,7 +1,5 @@
 <nav>
-    <a href="#">
-        LOGO <!-- fullLogo a modifier -->
-    </a>
+    <?php require_once __DIR__ . '/logo.php'; ?>
 
     <div>
         <a href="#">Accueil</a>
@@ -10,12 +8,13 @@
 
     <div>
         <a href="#">
-            <span>#</span> <!-- icon de chat a modifier -->
+            <span>◯</span>
             <span>Messagerie</span>
+            <span>1</span>
         </a>
 
         <a href="#">
-            <span>#</span> <!-- icon de user a modifier -->
+            <span>♙</span>
             <span>Mon compte</span>
         </a>
 
