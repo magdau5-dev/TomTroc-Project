@@ -21,13 +21,22 @@ body {
 }
 
 /* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+	width: 100%;
+	background-color: #f5f3ef;
+}
+
+/* ========================= */
 /* NAVBAR */
 /* ========================= */
 
 /* Barre de navigation */
 nav {
-	height: 80px;
 	width: 100%;
+	height: 80px;
 
 	display: flex;
 	align-items: center;
@@ -52,6 +61,7 @@ nav > a:first-child {
 nav > a:first-child img {
 	width: 155px;
 	height: auto;
+
 	display: block;
 }
 
@@ -59,6 +69,7 @@ nav > a:first-child img {
 nav > div:first-of-type {
 	display: flex;
 	align-items: center;
+
 	gap: 45px;
 }
 
@@ -73,9 +84,11 @@ nav > div:last-of-type {
 
 	display: flex;
 	align-items: center;
+
 	gap: 45px;
 
 	padding-left: 55px;
+
 	border-left: 1px solid #e5e5e5;
 }
 
@@ -83,6 +96,7 @@ nav > div:last-of-type {
 nav > div:last-of-type a {
 	display: flex;
 	align-items: center;
+
 	gap: 5px;
 }
 
@@ -99,6 +113,7 @@ nav > div:last-of-type a:first-child span:last-child {
 	color: white;
 
 	border-radius: 50%;
+
 	font-size: 9px;
 }
 
@@ -106,8 +121,15 @@ nav > div:last-of-type a:first-child span:last-child {
 /* HERO */
 /* ========================= */
 
-/* Section principale de la page d'accueil */
+/* Première section de la page */
 .hero {
+	width: 100%;
+
+	background-color: #f5f3ef;
+}
+
+/* Contenu du hero */
+.hero-inner {
 	min-height: 620px;
 
 	display: flex;
@@ -150,6 +172,7 @@ nav > div:last-of-type a:first-child span:last-child {
 	color: white;
 
 	text-decoration: none;
+
 	border-radius: 7px;
 
 	font-size: 13px;
@@ -165,6 +188,7 @@ nav > div:last-of-type a:first-child span:last-child {
 .hero-image img {
 	width: 100%;
 	height: auto;
+
 	display: block;
 }
 
@@ -175,6 +199,7 @@ nav > div:last-of-type a:first-child span:last-child {
 	text-align: right;
 
 	font-size: 10px;
+
 	color: #a6a6a6;
 }
 
@@ -184,9 +209,12 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Section des derniers livres */
 .latest-books {
+	width: 100%;
+
 	padding: 70px 0;
 
 	text-align: center;
+
 	background-color: #ffffff;
 }
 
@@ -199,10 +227,11 @@ nav > div:last-of-type a:first-child span:last-child {
 	font-weight: 400;
 }
 
-/* Zone qui contient les cartes */
+/* Zone qui contient les futures cartes */
 .latest-books-list {
 	display: flex;
 	justify-content: center;
+
 	gap: 30px;
 
 	margin-bottom: 45px;
@@ -217,7 +246,7 @@ nav > div:last-of-type a:first-child span:last-child {
 }
 
 /* Bouton sous les cartes */
-.latest-books > a {
+.latest-books > .container > a {
 	display: inline-block;
 
 	padding: 14px 28px;
@@ -226,6 +255,7 @@ nav > div:last-of-type a:first-child span:last-child {
 	color: white;
 
 	text-decoration: none;
+
 	border-radius: 7px;
 
 	font-size: 13px;
@@ -238,9 +268,12 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Section qui explique le fonctionnement */
 .how-it-works {
+	width: 100%;
+
 	padding: 70px 0;
 
 	text-align: center;
+
 	background-color: #f5f3ef;
 }
 
@@ -256,6 +289,7 @@ nav > div:last-of-type a:first-child span:last-child {
 /* Petit texte sous le titre */
 .how-it-works-intro {
 	width: 397px;
+
 	margin: 0 auto 40px;
 
 	font-family: Inter, sans-serif;
@@ -264,6 +298,7 @@ nav > div:last-of-type a:first-child span:last-child {
 	line-height: 1;
 
 	text-align: center;
+
 	color: #292929;
 }
 
@@ -271,6 +306,7 @@ nav > div:last-of-type a:first-child span:last-child {
 .how-it-works-list {
 	display: flex;
 	justify-content: center;
+
 	gap: 25px;
 
 	margin-bottom: 40px;
@@ -288,12 +324,13 @@ nav > div:last-of-type a:first-child span:last-child {
 	padding: 20px;
 
 	background-color: #ffffff;
+
 	border-radius: 10px;
 
 	text-align: center;
 }
 
-/* Texte dans une étape */
+/* Texte d'une étape */
 .how-it-works article p {
 	margin: 0;
 
@@ -304,7 +341,7 @@ nav > div:last-of-type a:first-child span:last-child {
 }
 
 /* Bouton avec contour vert */
-.how-it-works > a {
+.how-it-works .container > a {
 	width: 218px;
 	height: 63px;
 
@@ -330,23 +367,27 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Section des valeurs */
 .values {
+	width: 100%;
+
 	padding-bottom: 80px;
 
 	background-color: #f5f3ef;
 }
 
-/* Grande image */
+/* Grande image sur toute la largeur */
 .values-image {
 	width: 100%;
 	height: 230px;
 
 	display: block;
+
 	object-fit: cover;
 }
 
 /* Bloc avec le texte */
 .values-content {
 	width: 430px;
+
 	margin: 45px auto 0;
 }
 
@@ -354,12 +395,13 @@ nav > div:last-of-type a:first-child span:last-child {
 .values h2 {
 	margin-bottom: 25px;
 
-	font-family: 'Playfair Display', serif;
+	font-family: 'Playfair Display', Georgia, serif;
 	font-size: 32px;
 	font-weight: 400;
 	line-height: 1;
 
-	text-align: center;
+	text-align: left;
+
 	color: #292929;
 }
 
@@ -376,6 +418,7 @@ nav > div:last-of-type a:first-child span:last-child {
 /* Signature */
 .values-content span {
 	display: block;
+
 	margin-top: 25px;
 
 	font-size: 10px;
@@ -384,11 +427,9 @@ nav > div:last-of-type a:first-child span:last-child {
 	color: #a6a6a6;
 }
 
-
 /* ========================= */
 /* FOOTER */
 /* ========================= */
-
 
 /* Pied de page */
 .footer {
@@ -401,6 +442,7 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Contenu du footer */
 .footer-content {
+    width: 100%;
     height: 100%;
 
     display: flex;
@@ -434,7 +476,7 @@ nav > div:last-of-type a:first-child span:last-child {
 }
 
 
-/* Petit logo à droite */
+/* Petit logo */
 .footer-content img {
     width: 22px;
     height: auto;
