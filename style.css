@@ -1,33 +1,37 @@
 /* On enlève les marges par défaut du navigateur */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Conteneur principal pour centrer le contenu */
 .container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 32px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
 }
+
 
 /* Style général de la page */
 body {
-	font-family: Inter, sans-serif;
-	color: #292929;
-	background-color: #f5f3ef;
+    font-family: Inter, sans-serif;
+    color: #292929;
+    background-color: #FAF9F7;
 }
+
 
 /* ========================= */
 /* HEADER */
 /* ========================= */
 
 header {
-	width: 100%;
-	background-color: #f5f3ef;
+    width: 100%;
+    background-color: #F5F3EF;
 }
+
 
 /* ========================= */
 /* NAVBAR */
@@ -35,84 +39,91 @@ header {
 
 /* Barre de navigation */
 nav {
-	width: 100%;
-	height: 80px;
+    width: 100%;
+    height: 80px;
 
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 
 /* Style de base des liens */
 nav a {
-	text-decoration: none;
-	color: #292929;
-	font-size: 14px;
+    text-decoration: none;
+    color: #292929;
+    font-size: 14px;
 }
+
 
 /* Logo */
 nav > a:first-child {
-	display: flex;
-	align-items: center;
-
-	margin-right: 75px;
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
 }
+
 
 /* Taille du logo */
 nav > a:first-child img {
-	width: 155px;
-	height: auto;
-	display: block;
+    width: 155px;
+    height: auto;
+    display: block;
 }
+
 
 /* Partie gauche du menu */
 nav > div:first-of-type {
-	display: flex;
-	align-items: center;
-	gap: 45px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
 }
+
 
 /* Accueil un peu plus visible */
 nav > div:first-of-type a:first-child {
-	font-weight: 600;
+    font-weight: 600;
 }
+
 
 /* Partie droite du menu */
 nav > div:last-of-type {
-	margin-left: auto;
+    margin-left: auto;
 
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 45px;
 
-	gap: 45px;
+    padding-left: 55px;
 
-	padding-left: 55px;
-
-	border-left: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
 }
+
 
 /* Aligne les icônes avec le texte */
 nav > div:last-of-type a {
-	display: flex;
-	align-items: center;
-	gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
+
 
 /* Petit rond avec le nombre de messages */
 nav > div:last-of-type a:first-child span:last-child {
-	width: 15px;
-	height: 15px;
+    width: 15px;
+    height: 15px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	background-color: #292929;
-	color: white;
+    background-color: #292929;
+    color: white;
 
-	border-radius: 50%;
+    border-radius: 50%;
 
-	font-size: 9px;
+    font-size: 9px;
 }
+
 
 /* ========================= */
 /* HERO */
@@ -120,83 +131,92 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Première section de la page */
 .hero {
-	width: 100%;
-	background-color: #f5f3ef;
+    width: 100%;
+    background-color: #F5F3EF;
 }
+
 
 /* Contenu du hero */
 .hero-inner {
-	min-height: 620px;
+    min-height: 620px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	gap: 70px;
+    gap: 70px;
 }
+
 
 /* Bloc avec le texte */
 .hero-content {
-	width: 300px;
+    width: 300px;
 }
+
 
 /* Titre principal */
 .hero h1 {
-	margin-bottom: 18px;
+    margin-bottom: 18px;
 
-	font-family: Georgia, serif;
-	font-size: 36px;
-	font-weight: 400;
-	line-height: 1.05;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.05;
 }
+
 
 /* Texte sous le titre */
 .hero-content p {
-	margin-bottom: 28px;
+    margin-bottom: 28px;
 
-	font-size: 13px;
-	line-height: 1.3;
+    font-size: 13px;
+    line-height: 1.3;
 }
+
 
 /* Bouton Découvrir */
 .hero-content a {
-	display: inline-block;
+    display: inline-block;
 
-	padding: 14px 28px;
+    padding: 14px 28px;
 
-	background-color: #00ac66;
-	color: white;
+    background-color: #00AC66;
+    color: white;
 
-	text-decoration: none;
+    text-decoration: none;
 
-	border-radius: 7px;
+    border-radius: 7px;
 
-	font-size: 13px;
-	font-weight: 600;
+    font-size: 13px;
+    font-weight: 600;
 }
+
 
 /* Bloc de l'image */
 .hero-image {
-	width: 360px;
+    width: 360px;
 }
+
 
 /* Image du hero */
 .hero-image img {
-	width: 100%;
-	height: auto;
-	display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
 
 /* Nom de l'auteur sous l'image */
 .hero-image figcaption {
-	margin-top: 8px;
+    margin-top: 8px;
 
-	text-align: right;
+    text-align: right;
 
-	font-size: 10px;
+    font-size: 10px;
 
-	color: #a6a6a6;
+    color: #a6a6a6;
 }
+
 
 /* ========================= */
 /* DERNIERS LIVRES */
@@ -204,50 +224,54 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Section des derniers livres */
 .latest-books {
-	width: 100%;
+    width: 100%;
 
-	padding: 70px 0;
+    padding: 70px 0;
 
-	text-align: center;
+    text-align: center;
 
-	background-color: #ffffff;
+    background-color: #FFFFFF;
 }
+
 
 /* Titre de la section */
 .latest-books h2 {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 
-	font-family: Georgia, serif;
-	font-size: 30px;
-	font-weight: 400;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
 }
 
-/* Zone qui contient les futures cartes */
+
+/* Zone qui contient les cartes */
 .latest-books-list {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 
-	gap: 30px;
+    gap: 30px;
 
-	margin-bottom: 45px;
+    margin-bottom: 45px;
 }
+
 
 /* Bouton sous les cartes */
 .latest-books > .container > a {
-	display: inline-block;
+    display: inline-block;
 
-	padding: 14px 28px;
+    padding: 14px 28px;
 
-	background-color: #00ac66;
-	color: white;
+    background-color: #00AC66;
+    color: white;
 
-	text-decoration: none;
+    text-decoration: none;
 
-	border-radius: 7px;
+    border-radius: 7px;
 
-	font-size: 13px;
-	font-weight: 600;
+    font-size: 13px;
+    font-weight: 600;
 }
+
 
 /* ========================= */
 /* COMMENT ÇA MARCHE */
@@ -255,98 +279,105 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Section qui explique le fonctionnement */
 .how-it-works {
-	width: 100%;
+    width: 100%;
 
-	padding: 70px 0;
+    padding: 70px 0;
 
-	text-align: center;
+    text-align: center;
 
-	background-color: #f5f3ef;
+    background-color: #F5F3EF;
 }
+
 
 /* Titre */
 .how-it-works h2 {
-	margin-bottom: 32px;
+    margin-bottom: 32px;
 
-	font-family: Georgia, serif;
-	font-size: 30px;
-	font-weight: 400;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
 }
+
 
 /* Petit texte sous le titre */
 .how-it-works-intro {
-	width: 397px;
+    width: 397px;
 
-	margin: 0 auto 40px;
+    margin: 0 auto 40px;
 
-	font-family: Inter, sans-serif;
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 1;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
 
-	text-align: center;
+    text-align: center;
 
-	color: #292929;
+    color: #292929;
 }
+
 
 /* Liste des étapes */
 .how-it-works-list {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 
-	gap: 25px;
+    gap: 25px;
 
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
+
 
 /* Une étape */
 .how-it-works article {
-	width: 215px;
-	height: 139px;
+    width: 215px;
+    height: 139px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	padding: 20px;
+    padding: 20px;
 
-	background-color: #ffffff;
+    background-color: #FFFFFF;
 
-	border-radius: 10px;
+    border-radius: 10px;
 
-	text-align: center;
+    text-align: center;
 }
+
 
 /* Texte d'une étape */
 .how-it-works article p {
-	margin: 0;
+    margin: 0;
 
-	font-size: 12px;
-	line-height: 1.2;
+    font-size: 12px;
+    line-height: 1.2;
 
-	color: #292929;
+    color: #292929;
 }
+
 
 /* Bouton avec contour vert */
 .how-it-works .container > a {
-	width: 218px;
-	height: 63px;
+    width: 218px;
+    height: 63px;
 
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-	color: #00ac66;
-	background-color: #f5f3ef;
+    color: #00AC66;
+    background-color: #F5F3EF;
 
-	text-decoration: none;
+    text-decoration: none;
 
-	border: 1px solid #00ac66;
-	border-radius: 10px;
+    border: 1px solid #00AC66;
+    border-radius: 10px;
 
-	font-size: 14px;
-	font-weight: 600;
+    font-size: 14px;
+    font-weight: 600;
 }
+
 
 /* ========================= */
 /* NOS VALEURS */
@@ -354,65 +385,71 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Section des valeurs */
 .values {
-	width: 100%;
+    width: 100%;
 
-	padding-bottom: 80px;
+    padding-bottom: 80px;
 
-	background-color: #f5f3ef;
+    background-color: #F5F3EF;
 }
+
 
 /* Grande image sur toute la largeur */
 .values-image {
-	width: 100%;
-	height: 230px;
+    width: 100%;
+    height: 230px;
 
-	display: block;
+    display: block;
 
-	object-fit: cover;
+    object-fit: cover;
 }
+
 
 /* Bloc avec le texte */
 .values-content {
-	width: 430px;
+    width: 430px;
 
-	margin: 45px auto 0;
+    margin: 45px auto 0;
 }
+
 
 /* Titre Nos valeurs */
 .values h2 {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 
-	font-family: 'Playfair Display', Georgia, serif;
-	font-size: 32px;
-	font-weight: 400;
-	line-height: 1;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
 
-	text-align: left;
+    text-align: left;
 
-	color: #292929;
+    color: #292929;
 }
+
 
 /* Paragraphes */
 .values-content p {
-	margin-bottom: 18px;
+    margin-bottom: 18px;
 
-	font-size: 13px;
-	line-height: 1.35;
+    font-size: 13px;
+    line-height: 1.35;
 
-	color: #292929;
+    color: #292929;
 }
+
 
 /* Signature */
 .values-content span {
-	display: block;
+    display: block;
 
-	margin-top: 25px;
+    margin-top: 25px;
 
-	font-size: 10px;
-	font-style: italic;
+    font-size: 10px;
+    font-style: italic;
 
-	color: #a6a6a6;
+    color: #a6a6a6;
 }
+
 
 /* ========================= */
 /* FOOTER */
@@ -420,52 +457,57 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Pied de page */
 .footer {
-	width: 100%;
-	height: 61px;
+    width: 100%;
+    height: 61px;
 
-	background-color: #ffffff;
+    background-color: #FFFFFF;
 }
+
 
 /* Contenu du footer */
 .footer-content {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-	gap: 35px;
+    gap: 35px;
 
-	padding: 0 46px;
+    padding: 0 46px;
 }
+
 
 /* Liens du footer */
 .footer-content a {
-	font-family: Inter, sans-serif;
-	font-size: 12px;
-	font-weight: 300;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
 
-	color: #292929;
-	text-decoration: none;
+    color: #292929;
+    text-decoration: none;
 }
+
 
 /* Texte Tom Troc */
 .footer-content span {
-	font-family: Inter, sans-serif;
-	font-size: 12px;
-	font-weight: 300;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
 
-	color: #292929;
+    color: #292929;
 }
+
 
 /* Petit logo */
 .footer-content img {
-	width: 22px;
-	height: auto;
+    width: 22px;
+    height: auto;
 
-	display: block;
+    display: block;
 }
+
 
 /* ========================= */
 /* PAGE LIVRES */
@@ -473,217 +515,59 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Page avec tous les livres disponibles */
 .books-page {
-	width: 100%;
+    width: 100%;
 
-	padding: 80px 0;
+    padding: 80px 0;
 
-	background-color: #f5f3ef;
+    background-color: #FAF9F7;
 }
+
 
 /* Titre et barre de recherche */
 .books-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-	margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
 
 /* Titre de la page */
 .books-header h1 {
-	font-family: 'Playfair Display', Georgia, serif;
-	font-size: 36px;
-	font-weight: 400;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
 
-	color: #292929;
+    color: #292929;
 }
+
 
 /* Champ de recherche */
 .books-header input {
-	width: 320px;
-	height: 48px;
+    width: 320px;
+    height: 48px;
 
-	padding: 0 16px;
+    padding: 0 16px;
 
-	border: 1px solid #e5e5e5;
-	border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
 
-	font-family: Inter, sans-serif;
-	font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
 
-	background-color: #ffffff;
+    background-color: #FFFFFF;
 }
+
 
 /* Grille des livres */
 .books-grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-	gap: 40px 30px;
+    gap: 40px 30px;
 }
 
-/* Emplacement d'une future carte de livre */
-.books-grid article {
-	height: 360px;
-
-	background-color: #ffffff;
-
-	border-radius: 8px;
-}
-
-/* ========================= */
-/* DÉTAIL D'UN LIVRE */
-/* ========================= */
-
-/* Page de détail d'un livre */
-.book-details {
-	width: 100%;
-
-	background-color: #f5f3ef;
-}
-
-/* Petit chemin au-dessus du livre */
-.book-details-breadcrumb {
-	padding: 20px 0;
-
-	font-size: 12px;
-	color: #a6a6a6;
-}
-
-/* Partie principale avec l'image et les informations */
-.book-details-content {
-	display: flex;
-
-	width: 100%;
-}
-
-/* Zone réservée à l'image du livre */
-.book-details-image {
-	width: 50%;
-	min-height: 700px;
-
-	background-color: #e9e7e2;
-}
-
-/* Si une image est ajoutée plus tard */
-.book-details-image img {
-	width: 100%;
-	height: 100%;
-
-	display: block;
-
-	object-fit: cover;
-}
-
-/* Partie droite avec les informations */
-.book-details-info {
-	width: 50%;
-
-	padding: 70px 80px;
-
-	background-color: #f5f3ef;
-}
-
-/* Titre du livre */
-.book-details-info h1 {
-	margin-bottom: 15px;
-
-	font-family: 'Playfair Display', Georgia, serif;
-	font-size: 36px;
-	font-weight: 400;
-
-	color: #292929;
-}
-
-/* Auteur du livre */
-.book-details-author {
-	margin-bottom: 30px;
-
-	font-size: 16px;
-	font-weight: 300;
-
-	color: #a6a6a6;
-}
-
-/* Petite ligne sous l'auteur */
-.book-details-info hr {
-	width: 28px;
-
-	margin-bottom: 30px;
-
-	border: none;
-	border-top: 1px solid #a6a6a6;
-}
-
-/* Petits titres DESCRIPTION et PROPRIÉTAIRE */
-.book-details-info h2 {
-	margin-bottom: 20px;
-
-	font-size: 10px;
-	font-weight: 600;
-	letter-spacing: 1px;
-}
-
-/* Paragraphes de description */
-.book-details-info > p:not(.book-details-author) {
-	margin-bottom: 18px;
-
-	font-size: 14px;
-	line-height: 1.35;
-
-	color: #292929;
-}
-
-/* Bloc avec le propriétaire */
-.book-details-owner {
-	width: fit-content;
-
-	display: flex;
-	align-items: center;
-
-	gap: 12px;
-
-	margin-bottom: 60px;
-
-	padding: 6px 12px 6px 6px;
-
-	background-color: #ffffff;
-
-	border-radius: 40px;
-
-	text-decoration: none;
-	color: #292929;
-}
-
-/* Photo du propriétaire */
-.book-details-owner img {
-	width: 48px;
-	height: 48px;
-
-	border-radius: 50%;
-
-	object-fit: cover;
-}
-
-/* Bouton Envoyer un message */
-.book-details-message {
-	width: 100%;
-	height: 63px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	background-color: #00ac66;
-	color: #ffffff;
-
-	text-decoration: none;
-
-	border-radius: 10px;
-
-	font-size: 16px;
-	font-weight: 600;
-}
 
 /* ========================= */
 /* CARTE LIVRE */
@@ -693,7 +577,7 @@ nav > div:last-of-type a:first-child span:last-child {
 .book-card {
     width: 220px;
 
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 
     border-radius: 8px;
     overflow: hidden;
@@ -705,7 +589,7 @@ nav > div:last-of-type a:first-child span:last-child {
     width: 100%;
     height: 220px;
 
-    background-color: #f1f1f1;
+    background-color: #F1F1F1;
 }
 
 
@@ -733,7 +617,7 @@ nav > div:last-of-type a:first-child span:last-child {
     font-size: 12px;
     font-weight: 300;
 
-    color: #a6a6a6;
+    color: #A6A6A6;
 }
 
 
@@ -743,5 +627,173 @@ nav > div:last-of-type a:first-child span:last-child {
     font-weight: 300;
     font-style: italic;
 
-    color: #a6a6a6;
+    color: #A6A6A6;
+}
+
+
+/* ========================= */
+/* DÉTAIL D'UN LIVRE */
+/* ========================= */
+
+/* Page de détail d'un livre */
+.book-details {
+    width: 100%;
+
+    background-color: #FAF9F7;
+}
+
+
+/* Petit chemin au-dessus du livre */
+.book-details-breadcrumb {
+    padding: 20px 0;
+
+    font-size: 12px;
+    color: #A6A6A6;
+}
+
+
+/* Partie principale avec l'image et les informations */
+.book-details-content {
+    display: flex;
+
+    width: 100%;
+}
+
+
+/* Zone réservée à l'image du livre */
+.book-details-image {
+    width: 50%;
+    min-height: 700px;
+
+    background-color: #E9E7E2;
+}
+
+
+/* Si une image est ajoutée plus tard */
+.book-details-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Partie droite avec les informations */
+.book-details-info {
+    width: 50%;
+
+    padding: 70px 80px;
+
+    background-color: #FAF9F7;
+}
+
+
+/* Titre du livre */
+.book-details-info h1 {
+    margin-bottom: 15px;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+
+    color: #292929;
+}
+
+
+/* Auteur du livre */
+.book-details-author {
+    margin-bottom: 30px;
+
+    font-size: 16px;
+    font-weight: 300;
+
+    color: #A6A6A6;
+}
+
+
+/* Petite ligne sous l'auteur */
+.book-details-info hr {
+    width: 28px;
+
+    margin-bottom: 30px;
+
+    border: none;
+    border-top: 1px solid #A6A6A6;
+}
+
+
+/* Petits titres DESCRIPTION et PROPRIÉTAIRE */
+.book-details-info h2 {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* Paragraphes de description */
+.book-details-info > p:not(.book-details-author) {
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    line-height: 1.35;
+
+    color: #292929;
+}
+
+
+/* Bloc avec le propriétaire */
+.book-details-owner {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 60px;
+
+    padding: 6px 12px 6px 6px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+    color: #292929;
+}
+
+
+/* Photo du propriétaire */
+.book-details-owner img {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* Bouton Envoyer un message */
+.book-details-message {
+    width: 100%;
+    height: 63px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #00AC66;
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
 }
