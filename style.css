@@ -483,3 +483,73 @@ nav > div:last-of-type a:first-child span:last-child {
 
     display: block;
 }
+
+
+/* ========================= */
+/* PAGE LIVRES */
+/* ========================= */
+
+
+/* Page avec tous les livres disponibles */
+.books-page {
+    width: 100%;
+    padding: 80px 0;
+
+    background-color: #f5f3ef;
+}
+
+
+/* Titre et barre de recherche */
+.books-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 60px;
+}
+
+
+/* Titre de la page */
+.books-header h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+
+    color: #292929;
+}
+
+
+/* Champ de recherche */
+.books-header input {
+    width: 320px;
+    height: 48px;
+
+    padding: 0 16px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+
+    background-color: #ffffff;
+}
+
+
+/* Grille des livres */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px 30px;
+}
+
+
+/* Emplacement d'une future carte de livre */
+.books-grid article {
+    height: 360px;
+
+    background-color: #ffffff;
+
+    border-radius: 8px;
+}
