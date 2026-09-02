@@ -17,11 +17,10 @@
 
 /* Style général de la page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     color: #292929;
     background-color: #f5f3ef;
 }
-
 
 /* ========================= */
 /* NAVBAR */
@@ -256,5 +255,103 @@ main section:nth-child(2) > a {
     border-radius: 7px;
 
     font-size: 13px;
+    font-weight: 600;
+}
+
+/* ========================= */
+/* COMMENT ÇA MARCHE */
+/* ========================= */
+
+
+/* Section pour expliquer le fonctionnement */
+main section:nth-child(3) {
+    padding: 70px 0;
+
+    text-align: center;
+    background-color: #f5f3ef;
+}
+
+
+/* Titre de la section */
+main section:nth-child(3) h2 {
+    margin-bottom: 32px;
+
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+/* Petit texte sous le titre */
+main section:nth-child(3) > p {
+    width: 397px;
+    margin: 0 auto 40px;
+
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+
+    text-align: center;
+    color: #292929;
+}
+
+/* Liste des étapes */
+main section:nth-child(3) > div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+
+/* Une étape */
+main section:nth-child(3) article {
+    width: 215px;
+    height: 139px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+/* Texte dans les étapes */
+main section:nth-child(3) article p {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.2;
+
+    color: #292929;
+}
+
+/* Bouton avec contour vert */
+main section:nth-child(3) > a {
+    width: 218px;
+    height: 63px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px 38px;
+
+    color: #00AC66;
+    background-color: #F5F3EF;
+
+    text-decoration: none;
+
+    border: 1px solid #00AC66;
+    border-radius: 10px;
+
+    font-size: 14px;
     font-weight: 600;
 }
