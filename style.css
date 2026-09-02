@@ -1,357 +1,385 @@
 /* On enlève les marges par défaut du navigateur */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 
 /* Conteneur principal pour centrer le contenu */
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 32px;
 }
-
 
 /* Style général de la page */
 body {
-    font-family: Inter, sans-serif;
-    color: #292929;
-    background-color: #f5f3ef;
+	font-family: Inter, sans-serif;
+	color: #292929;
+	background-color: #f5f3ef;
 }
 
 /* ========================= */
 /* NAVBAR */
 /* ========================= */
 
-
 /* Barre de navigation */
 nav {
-    height: 80px;
-    width: 100%;
+	height: 80px;
+	width: 100%;
 
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
-
 
 /* Style de base des liens */
 nav a {
-    text-decoration: none;
-    color: #292929;
-    font-size: 14px;
+	text-decoration: none;
+	color: #292929;
+	font-size: 14px;
 }
-
 
 /* Logo */
 nav > a:first-child {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
-    margin-right: 75px;
+	margin-right: 75px;
 }
-
 
 /* Taille du logo */
 nav > a:first-child img {
-    width: 155px;
-    height: auto;
-    display: block;
+	width: 155px;
+	height: auto;
+	display: block;
 }
-
 
 /* Partie gauche du menu */
 nav > div:first-of-type {
-    display: flex;
-    align-items: center;
-    gap: 45px;
+	display: flex;
+	align-items: center;
+	gap: 45px;
 }
-
 
 /* Accueil un peu plus visible */
 nav > div:first-of-type a:first-child {
-    font-weight: 600;
+	font-weight: 600;
 }
-
 
 /* Partie droite du menu */
 nav > div:last-of-type {
-    margin-left: auto;
+	margin-left: auto;
 
-    display: flex;
-    align-items: center;
-    gap: 45px;
+	display: flex;
+	align-items: center;
+	gap: 45px;
 
-    padding-left: 55px;
-    border-left: 1px solid #e5e5e5;
+	padding-left: 55px;
+	border-left: 1px solid #e5e5e5;
 }
-
 
 /* Aligne les icônes avec le texte */
 nav > div:last-of-type a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
 }
-
 
 /* Petit rond avec le nombre de messages */
 nav > div:last-of-type a:first-child span:last-child {
-    width: 15px;
-    height: 15px;
+	width: 15px;
+	height: 15px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    background-color: #292929;
-    color: white;
+	background-color: #292929;
+	color: white;
 
-    border-radius: 50%;
-    font-size: 9px;
+	border-radius: 50%;
+	font-size: 9px;
 }
-
 
 /* ========================= */
 /* HERO */
 /* ========================= */
 
+/* Section principale de la page d'accueil */
+.hero {
+	min-height: 620px;
 
-/* Première section de la page d'accueil */
-main section:first-child {
-    min-height: 620px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 70px;
+	gap: 70px;
 }
 
-
-/* Bloc avec le titre, le texte et le bouton */
-main section:first-child > div {
-    width: 300px;
+/* Bloc avec le texte */
+.hero-content {
+	width: 300px;
 }
-
 
 /* Titre principal */
-main section:first-child h1 {
-    margin-bottom: 18px;
+.hero h1 {
+	margin-bottom: 18px;
 
-    font-family: Georgia, serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.05;
+	font-family: Georgia, serif;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 1.05;
 }
-
 
 /* Texte sous le titre */
-main section:first-child p {
-    margin-bottom: 28px;
+.hero-content p {
+	margin-bottom: 28px;
 
-    font-size: 13px;
-    line-height: 1.3;
+	font-size: 13px;
+	line-height: 1.3;
 }
-
 
 /* Bouton Découvrir */
-main section:first-child > div > a {
-    display: inline-block;
+.hero-content a {
+	display: inline-block;
 
-    padding: 14px 28px;
+	padding: 14px 28px;
 
-    background-color: #00ac66;
-    color: white;
+	background-color: #00ac66;
+	color: white;
 
-    text-decoration: none;
-    border-radius: 7px;
+	text-decoration: none;
+	border-radius: 7px;
 
-    font-size: 13px;
-    font-weight: 600;
+	font-size: 13px;
+	font-weight: 600;
 }
-
 
 /* Bloc de l'image */
-main section:first-child figure {
-    width: 360px;
+.hero-image {
+	width: 360px;
 }
 
-
-/* Image principale du hero */
-main section:first-child figure img {
-    width: 100%;
-    height: auto;
-    display: block;
+/* Image du hero */
+.hero-image img {
+	width: 100%;
+	height: auto;
+	display: block;
 }
-
 
 /* Nom de l'auteur sous l'image */
-main section:first-child figcaption {
-    margin-top: 8px;
+.hero-image figcaption {
+	margin-top: 8px;
 
-    text-align: right;
+	text-align: right;
 
-    font-size: 10px;
-    color: #a6a6a6;
+	font-size: 10px;
+	color: #a6a6a6;
 }
 
 /* ========================= */
 /* DERNIERS LIVRES */
 /* ========================= */
 
-
 /* Section des derniers livres */
-main section:nth-child(2) {
-    padding: 70px 0;
+.latest-books {
+	padding: 70px 0;
 
-    text-align: center;
-    background-color: #ffffff;
+	text-align: center;
+	background-color: #ffffff;
 }
-
 
 /* Titre de la section */
-main section:nth-child(2) h2 {
-    margin-bottom: 50px;
+.latest-books h2 {
+	margin-bottom: 50px;
 
-    font-family: Georgia, serif;
-    font-size: 30px;
-    font-weight: 400;
+	font-family: Georgia, serif;
+	font-size: 30px;
+	font-weight: 400;
 }
-
 
 /* Zone qui contient les cartes */
-main section:nth-child(2) > div {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.latest-books-list {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
 
-    margin-bottom: 45px;
+	margin-bottom: 45px;
 }
 
+/* Emplacement d'une future carte */
+.latest-books article {
+	width: 220px;
+	height: 300px;
 
-/* Emplacement d'une future carte de livre */
-main section:nth-child(2) article {
-    width: 220px;
-    height: 300px;
-
-    background-color: #f5f5f5;
-    
+	background-color: #f5f5f5;
 }
-
 
 /* Bouton sous les cartes */
-main section:nth-child(2) > a {
-    display: inline-block;
+.latest-books > a {
+	display: inline-block;
 
-    padding: 14px 28px;
+	padding: 14px 28px;
 
-    background-color: #00ac66;
-    color: white;
+	background-color: #00ac66;
+	color: white;
 
-    text-decoration: none;
-    border-radius: 7px;
+	text-decoration: none;
+	border-radius: 7px;
 
-    font-size: 13px;
-    font-weight: 600;
+	font-size: 13px;
+	font-weight: 600;
 }
 
 /* ========================= */
 /* COMMENT ÇA MARCHE */
 /* ========================= */
 
+/* Section qui explique le fonctionnement */
+.how-it-works {
+	padding: 70px 0;
 
-/* Section pour expliquer le fonctionnement */
-main section:nth-child(3) {
-    padding: 70px 0;
-
-    text-align: center;
-    background-color: #f5f3ef;
+	text-align: center;
+	background-color: #f5f3ef;
 }
 
+/* Titre */
+.how-it-works h2 {
+	margin-bottom: 32px;
 
-/* Titre de la section */
-main section:nth-child(3) h2 {
-    margin-bottom: 32px;
-
-    font-family: Georgia, serif;
-    font-size: 30px;
-    font-weight: 400;
+	font-family: Georgia, serif;
+	font-size: 30px;
+	font-weight: 400;
 }
-
 
 /* Petit texte sous le titre */
-main section:nth-child(3) > p {
-    width: 397px;
-    margin: 0 auto 40px;
+.how-it-works-intro {
+	width: 397px;
+	margin: 0 auto 40px;
 
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1;
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1;
 
-    text-align: center;
-    color: #292929;
+	text-align: center;
+	color: #292929;
 }
 
 /* Liste des étapes */
-main section:nth-child(3) > div {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+.how-it-works-list {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
 
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 }
-
 
 /* Une étape */
-main section:nth-child(3) article {
-    width: 215px;
-    height: 139px;
+.how-it-works article {
+	width: 215px;
+	height: 139px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    padding: 20px;
+	padding: 20px;
 
-    background-color: #ffffff;
-    border-radius: 10px;
+	background-color: #ffffff;
+	border-radius: 10px;
 
-    text-align: center;
+	text-align: center;
 }
 
-/* Texte dans les étapes */
-main section:nth-child(3) article p {
-    margin: 0;
+/* Texte dans une étape */
+.how-it-works article p {
+	margin: 0;
 
-    font-size: 12px;
-    line-height: 1.2;
+	font-size: 12px;
+	line-height: 1.2;
 
-    color: #292929;
+	color: #292929;
 }
 
 /* Bouton avec contour vert */
-main section:nth-child(3) > a {
-    width: 218px;
-    height: 63px;
+.how-it-works > a {
+	width: 218px;
+	height: 63px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 
-    padding: 22px 38px;
+	color: #00ac66;
+	background-color: #f5f3ef;
 
-    color: #00AC66;
-    background-color: #F5F3EF;
+	text-decoration: none;
 
-    text-decoration: none;
+	border: 1px solid #00ac66;
+	border-radius: 10px;
 
-    border: 1px solid #00AC66;
-    border-radius: 10px;
+	font-size: 14px;
+	font-weight: 600;
+}
 
-    font-size: 14px;
-    font-weight: 600;
+/* ========================= */
+/* NOS VALEURS */
+/* ========================= */
+
+/* Section des valeurs */
+.values {
+	padding-bottom: 80px;
+
+	background-color: #f5f3ef;
+}
+
+/* Grande image */
+.values-image {
+	width: 100%;
+	height: 230px;
+
+	display: block;
+	object-fit: cover;
+}
+
+/* Bloc avec le texte */
+.values-content {
+	width: 430px;
+	margin: 45px auto 0;
+}
+
+/* Titre Nos valeurs */
+.values h2 {
+	margin-bottom: 25px;
+
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1;
+
+	text-align: center;
+	color: #292929;
+}
+
+/* Paragraphes */
+.values-content p {
+	margin-bottom: 18px;
+
+	font-size: 13px;
+	line-height: 1.35;
+
+	color: #292929;
+}
+
+/* Signature */
+.values-content span {
+	display: block;
+	margin-top: 25px;
+
+	font-size: 10px;
+	font-style: italic;
+
+	color: #a6a6a6;
 }

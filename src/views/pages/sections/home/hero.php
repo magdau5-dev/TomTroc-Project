@@ -1,5 +1,6 @@
-<section>
-    <div>
+<section class="hero">
+
+    <div class="hero-content">
         <h1>
             Rejoignez nos<br>
             lecteurs passionnés
@@ -16,7 +17,7 @@
         </a>
     </div>
 
-    <figure>
+    <figure class="hero-image">
         <img
             src="/TomTroc-Project/public/img/hero.png"
             alt="Librairie avec de nombreux livres"
@@ -26,4 +27,5 @@
             Hamza
         </figcaption>
     </figure>
+
 </section>

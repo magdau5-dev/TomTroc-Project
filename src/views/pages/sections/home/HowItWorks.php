@@ -1,12 +1,16 @@
-<section>
-    <h2>Comment ça marche ?</h2>
+<section class="how-it-works">
 
-    <p>
+    <h2>
+        Comment ça marche ?
+    </h2>
+
+    <p class="how-it-works-intro">
         Échanger des livres avec TomTroc c'est simple et amusant !
         Suivez ces étapes pour commencer :
     </p>
 
-    <div>
+    <div class="how-it-works-list">
+
         <article>
             <p>
                 Inscrivez-vous gratuitement sur notre plateforme.
@@ -30,9 +34,11 @@
                 Proposez un échange et discutez avec d'autres passionnés de lecture.
             </p>
         </article>
+
     </div>
 
     <a href="#">
         Voir tous les livres
     </a>
+
 </section>
