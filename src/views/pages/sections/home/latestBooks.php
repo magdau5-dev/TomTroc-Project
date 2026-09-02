@@ -8,12 +8,12 @@
 
         <div class="latest-books-list">
 
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
+    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
 
-        </div>
+</div>
 
         <a href="#">
             Voir tous les livres
