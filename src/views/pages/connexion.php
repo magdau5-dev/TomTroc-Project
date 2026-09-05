@@ -40,7 +40,7 @@
     </div>
 
     <div class="connexion-image">
-        <!-- Img ajoutée plus tard -->
+        <!-- Img  -->
     </div>
 
 </section>

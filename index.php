@@ -7,7 +7,7 @@
 
     <title>Tom Troc</title>
 
-    <link rel="stylesheet" href="/TomTroc-Project/style.css?v=5">
+    <link rel="stylesheet" href="/TomTroc-Project/style.css?v=6">
 </head>
 
 <body>
