@@ -1,10 +1,19 @@
+<?php
+
+require_once __DIR__ . '/../../controllers/UserController.php';
+
+$userController = new UserController();
+$userController->register();
+
+?>
+
 <section class="inscription-page">
 
     <div class="inscription-form">
 
         <h1>Inscription</h1>
 
-        <form>
+        <form method="POST">
 
             <label for="username">
                 Pseudo
@@ -14,6 +23,7 @@
                 type="text"
                 id="username"
                 name="username"
+                required
             >
 
             <label for="email">
@@ -24,6 +34,7 @@
                 type="email"
                 id="email"
                 name="email"
+                required
             >
 
             <label for="password">
@@ -34,6 +45,7 @@
                 type="password"
                 id="password"
                 name="password"
+                required
             >
 
             <button type="submit">
@@ -44,7 +56,9 @@
 
         <p>
             Déjà inscrit ?
-            <a href="#">Connectez-vous</a>
+            <a href="/TomTroc-Project/?page=connexion">
+                Connectez-vous
+            </a>
         </p>
 
     </div>
