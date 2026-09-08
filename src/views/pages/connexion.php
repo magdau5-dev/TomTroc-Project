@@ -4,7 +4,15 @@
 
         <h1>Connexion</h1>
 
-        <form>
+        <?php if (!empty($error)) : ?>
+
+            <p class="form-error">
+                <?= htmlspecialchars($error) ?>
+            </p>
+
+        <?php endif; ?>
+
+        <form method="POST">
 
             <label for="email">
                 Adresse email
@@ -14,6 +22,7 @@
                 type="email"
                 id="email"
                 name="email"
+                required
             >
 
             <label for="password">
@@ -24,6 +33,7 @@
                 type="password"
                 id="password"
                 name="password"
+                required
             >
 
             <button type="submit">
@@ -33,14 +43,18 @@
         </form>
 
         <p>
-            Pas de compte ?
-            <a href="#">Inscrivez-vous</a>
+            Pas encore inscrit ?
+
+            <a href="/TomTroc-Project/?page=inscription">
+                Inscrivez-vous
+            </a>
         </p>
 
     </div>
 
+
     <div class="connexion-image">
-        <!-- Img  -->
+        <!-- Imag-->
     </div>
 
 </section>

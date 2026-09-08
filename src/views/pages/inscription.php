@@ -1,17 +1,16 @@
-<?php
-
-require_once __DIR__ . '/../../controllers/UserController.php';
-
-$userController = new UserController();
-$userController->register();
-
-?>
-
 <section class="inscription-page">
 
     <div class="inscription-form">
 
         <h1>Inscription</h1>
+
+        <?php if (!empty($error)) : ?>
+
+            <p class="form-error">
+                <?= htmlspecialchars($error) ?>
+            </p>
+
+        <?php endif; ?>
 
         <form method="POST">
 
@@ -56,12 +55,14 @@ $userController->register();
 
         <p>
             Déjà inscrit ?
+
             <a href="/TomTroc-Project/?page=connexion">
                 Connectez-vous
             </a>
         </p>
 
     </div>
+
 
     <div class="inscription-image">
         <!-- Img -->
