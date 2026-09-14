@@ -2,48 +2,47 @@
 
 session_start();
 
+require_once __DIR__ . '/src/controllers/HomeController.php';
+require_once __DIR__ . '/src/controllers/BookController.php';
 require_once __DIR__ . '/src/controllers/UserController.php';
+require_once __DIR__ . '/src/controllers/ErrorController.php';
 
 $page = $_GET['page'] ?? 'home';
 
-$error = null;
+switch ($page) {
 
-$userController = new UserController();
+    case 'home':
+        $controller = new HomeController();
+        $controller->showHome();
+        break;
 
-if ($page === 'inscription') {
-    $error = $userController->register();
+    case 'books':
+        $controller = new BookController();
+        $controller->showBooks();
+        break;
+
+    case 'singleBook':
+        $controller = new BookController();
+        $controller->showBook();
+        break;
+
+    case 'connexion':
+        $controller = new UserController();
+        $controller->showLogin();
+        break;
+
+    case 'inscription':
+        $controller = new UserController();
+        $controller->showRegister();
+        break;
+
+    case 'profile':
+        $controller = new UserController();
+        $controller->showProfile();
+        break;
+
+    default:
+        $controller = new ErrorController();
+        $controller->notFound();
+        break;
 }
-
-if ($page === 'connexion') {
-    $error = $userController->login();
-}
-
-?>
-
-<!DOCTYPE html>
-
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Tom Troc</title>
-
-    <link
-        rel="stylesheet"
-        href="/TomTroc-Project/style.css?v=6"
-    >
-</head>
-
-<body>
-
-    <?php require_once __DIR__ . '/src/views/layouts/main.php'; ?>
-
-</body>
-
-</html>

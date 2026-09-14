@@ -1,9 +1,20 @@
 <?php
 
 require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../core/View.php';
 
 class UserController
 {
+
+    public function showRegister()
+    {
+        $error = $this->register();
+
+        View::render('inscription', [
+            'error' => $error
+        ]);
+    }
+
     public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -43,8 +54,17 @@ class UserController
 
         header('Location: /TomTroc-Project/?page=connexion');
         exit;
-    }
+    }                                             
 
+
+    public function showLogin()
+    {
+        $error = $this->login();
+
+        View::render('connexion', [
+            'error' => $error
+        ]);
+    }
 
     public function login()
     {
@@ -77,5 +97,10 @@ class UserController
 
         header('Location: /TomTroc-Project/?page=profile');
         exit;
+    }
+
+    public function showProfile()
+    {
+        View::render('profile');
     }
 }

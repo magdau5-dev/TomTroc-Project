@@ -1,44 +1,28 @@
-<?php require_once __DIR__ . '/header.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
 
-<main>
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <?php
+    <title>Tom Troc</title>
 
-    $page = $_GET['page'] ?? 'home';
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    switch ($page) {
+<body>
 
-        case 'home':
-            require_once __DIR__ . '/../pages/home.php';
-            break;
+    <?php require __DIR__ . '/header.php'; ?>
 
-        case 'books':
-            require_once __DIR__ . '/../pages/books.php';
-            break;
+    <main>
+        <?= $content ?>
+    </main>
 
-        case 'singleBook':
-            require_once __DIR__ . '/../pages/singleBook.php';
-            break;
+    <?php require __DIR__ . '/footer.php'; ?>
 
-        case 'connexion':
-            require_once __DIR__ . '/../pages/connexion.php';
-            break;
+</body>
 
-        case 'inscription':
-            require_once __DIR__ . '/../pages/inscription.php';
-            break;
-
-        case 'profile':
-            require_once __DIR__ . '/../pages/profile.php';
-            break;
-
-        default:
-            require_once __DIR__ . '/../pages/notFound404.php';
-            break;
-    }
-
-    ?>
-
-</main>
-
-<?php require_once __DIR__ . '/footer.php'; ?>
+</html>
