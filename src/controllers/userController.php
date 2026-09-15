@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../managers/UserManager.php';
 require_once __DIR__ . '/../core/View.php';
 
 class UserController
@@ -33,9 +34,8 @@ class UserController
             return 'Adresse email invalide.';
         }
 
-        $user = new User();
-
-        $existingUser = $user->findByEmail($email);
+        $userManager = new UserManager();
+        $existingUser = $userManager->findByEmail($email);
 
         if ($existingUser) {
             return 'Cette adresse email est déjà utilisée.';
@@ -46,11 +46,13 @@ class UserController
             PASSWORD_DEFAULT
         );
 
-        $user->create(
+        $user = new User(
             $username,
             $email,
             $hashedPassword
         );
+
+        $userManager->create($user);
 
         header('Location: /TomTroc-Project/?page=connexion');
         exit;
@@ -66,7 +68,7 @@ class UserController
         ]);
     }
 
-    public function login()
+   public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             return null;
@@ -79,9 +81,8 @@ class UserController
             return 'Tous les champs sont obligatoires.';
         }
 
-        $userModel = new User();
-
-        $user = $userModel->findByEmail($email);
+        $userManager = new UserManager();
+        $user = $userManager->findByEmail($email);
 
         if (!$user) {
             return 'Email ou mot de passe incorrect.';
