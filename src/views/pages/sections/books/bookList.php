@@ -19,25 +19,11 @@
 
         <div class="books-grid">
 
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+            <?php foreach ($books as $book): ?>
 
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+                <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
 
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-            <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+            <?php endforeach; ?>
 
         </div>
 

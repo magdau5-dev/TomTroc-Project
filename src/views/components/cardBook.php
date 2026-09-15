@@ -1,21 +1,24 @@
 <article class="book-card">
 
     <div class="book-card-image">
-        <!-- L'image du livre bdd -->
+        <img
+            src="/TomTroc-Project/public/img/books/<?= htmlspecialchars($book['image']) ?>"
+            alt="<?= htmlspecialchars($book['title']) ?>"
+        >
     </div>
 
     <div class="book-card-content">
 
         <h3>
-            Titre du livre
+            <?= htmlspecialchars($book['title']) ?>
         </h3>
 
         <p class="book-card-author">
-            Auteur
+            <?= htmlspecialchars($book['author']) ?>
         </p>
 
         <p class="book-card-owner">
-            Vendu par : utilisateur
+            Vendu par : <?= htmlspecialchars($book['username']) ?>
         </p>
 
     </div>
