@@ -1,47 +1,52 @@
 <?php
 
-require_once __DIR__ . '/Database.php';
-
 class User
 {
-    private $pdo;
+    private ?int $id = null;
+    private string $username;
+    private string $email;
+    private string $password;
+    private ?string $avatar = null;
 
-    public function __construct()
-    {
-        $database = new Database();
-        $this->pdo = $database->getConnection();
+    public function __construct(
+        string $username,
+        string $email,
+        string $password,
+        ?string $avatar = null
+    ) {
+        $this->username = $username;
+        $this->email = $email;
+        $this->password = $password;
+        $this->avatar = $avatar;
     }
 
-    public function create($username, $email, $password)
+    public function getId(): ?int
     {
-        $sql = "
-            INSERT INTO users (username, email, password)
-            VALUES (:username, :email, :password)
-        ";
-
-        $query = $this->pdo->prepare($sql);
-
-        return $query->execute([
-            'username' => $username,
-            'email' => $email,
-            'password' => $password
-        ]);
+        return $this->id;
     }
 
-    public function findByEmail($email)
+    public function setId(int $id): void
     {
-        $sql = "
-            SELECT *
-            FROM users
-            WHERE email = :email
-        ";
+        $this->id = $id;
+    }
 
-        $query = $this->pdo->prepare($sql);
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
 
-        $query->execute([
-            'email' => $email
-        ]);
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
 
-        return $query->fetch(PDO::FETCH_ASSOC);
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    public function getAvatar(): ?string
+    {
+        return $this->avatar;
     }
 }
