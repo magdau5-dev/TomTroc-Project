@@ -1,26 +1,35 @@
 <article class="book-card">
 
-    <div class="book-card-image">
-        <img
-            src="/TomTroc-Project/public/img/books/<?= htmlspecialchars($book['image']) ?>"
-            alt="<?= htmlspecialchars($book['title']) ?>"
-        >
-    </div>
+    <a
+        href="/TomTroc-Project/?page=singleBook&id=<?= (int) $book['id'] ?>"
+        class="book-card-link"
+    >
 
-    <div class="book-card-content">
+        <div class="book-card-image">
 
-        <h3>
-            <?= htmlspecialchars($book['title']) ?>
-        </h3>
+            <img
+                src="/TomTroc-Project/public/img/books/<?= htmlspecialchars($book['image']) ?>"
+                alt="<?= htmlspecialchars($book['title']) ?>"
+            >
 
-        <p class="book-card-author">
-            <?= htmlspecialchars($book['author']) ?>
-        </p>
+        </div>
 
-        <p class="book-card-owner">
-            Vendu par : <?= htmlspecialchars($book['username']) ?>
-        </p>
+        <div class="book-card-content">
 
-    </div>
+            <h3>
+                <?= htmlspecialchars($book['title']) ?>
+            </h3>
+
+            <p class="book-card-author">
+                <?= htmlspecialchars($book['author']) ?>
+            </p>
+
+            <p class="book-card-owner">
+                Vendu par : <?= htmlspecialchars($book['username']) ?>
+            </p>
+
+        </div>
+
+    </a>
 
 </article>
