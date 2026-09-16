@@ -13,6 +13,23 @@ class UserManager
         $this->pdo = $database->getConnection();
     }
 
+     public function create(User $user): void
+    {
+        $sql = "
+            INSERT INTO users (username, email, password, avatar)
+            VALUES (:username, :email, :password, :avatar)
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'username' => $user->getUsername(),
+            'email' => $user->getEmail(),
+            'password' => $user->getPassword(),
+            'avatar' => $user->getAvatar()
+        ]);
+    }
+
     public function findByEmail(string $email): ?array
     {
         $sql = "SELECT * FROM users WHERE email = :email";
@@ -28,20 +45,22 @@ class UserManager
         return $user ?: null;
     }
 
-    public function create(User $user): void
+    public function findById(int $id): ?array
     {
         $sql = "
-            INSERT INTO users (username, email, password, avatar)
-            VALUES (:username, :email, :password, :avatar)
+            SELECT id, username, email, avatar, created_at
+            FROM users
+            WHERE id = :id
         ";
 
         $query = $this->pdo->prepare($sql);
 
         $query->execute([
-            'username' => $user->getUsername(),
-            'email' => $user->getEmail(),
-            'password' => $user->getPassword(),
-            'avatar' => $user->getAvatar()
+            'id' => $id
         ]);
+
+        $user = $query->fetch(PDO::FETCH_ASSOC);
+
+        return $user ?: null;
     }
 }

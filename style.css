@@ -1221,3 +1221,25 @@ nav > div:last-of-type a:first-child span:last-child {
 .account-books td:last-child a:last-child {
 	color: #cb2d2d;
 }
+
+.account-avatar {
+    width: 110px;
+    height: 110px;
+
+    margin-bottom: 10px;
+
+    background-color: #e9e7e2;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.account-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}

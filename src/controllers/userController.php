@@ -100,8 +100,26 @@ class UserController
         exit;
     }
 
-    public function showProfile()
+    public function showProfile(): void
     {
-        View::render('profile');
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: /TomTroc-Project/?page=connexion');
+            exit;
+        }
+
+        $userManager = new UserManager();
+
+        $user = $userManager->findById(
+            (int) $_SESSION['user_id']
+        );
+
+        if (!$user) {
+            header('Location: /TomTroc-Project/?page=connexion');
+            exit;
+        }
+
+        View::render('profile', [
+            'user' => $user
+        ]);
     }
 }

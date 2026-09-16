@@ -9,7 +9,16 @@
             <article class="account-profile">
 
                 <div class="account-avatar">
-                    <!-- Photo de profil ajoutée plus tard depuis la BDD -->
+
+                    <?php if (!empty($user['avatar'])): ?>
+
+                        <img
+                            src="/TomTroc-Project/public/img/avatars/<?= htmlspecialchars($user['avatar']) ?>"
+                            alt="Avatar de <?= htmlspecialchars($user['username']) ?>"
+                        >
+
+                    <?php endif; ?>
+
                 </div>
 
                 <a href="#">
