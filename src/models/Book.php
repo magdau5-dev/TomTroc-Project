@@ -1,28 +1,83 @@
 <?php
 
-require_once __DIR__ . '/Database.php';
-
 class Book
 {
-    private $pdo;
+    private ?int $id = null;
 
-    public function __construct()
-    {
-        $database = new Database();
-        $this->pdo = $database->getConnection();
+    private int $userId;
+
+    private string $title;
+
+    private string $author;
+
+    private string $description;
+
+    private ?string $image;
+
+    private string $disponibilite;
+
+
+    public function __construct(
+        int $userId,
+        string $title,
+        string $author,
+        string $description,
+        ?string $image,
+        string $disponibilite
+    ) {
+        $this->userId = $userId;
+        $this->title = $title;
+        $this->author = $author;
+        $this->description = $description;
+        $this->image = $image;
+        $this->disponibilite = $disponibilite;
     }
 
-    public function findAll()
+
+    public function getId(): ?int
     {
-        $sql = "
-            SELECT books.*, users.username
-            FROM books
-            JOIN users ON books.user_id = users.id
-            ORDER BY books.created_at DESC
-        ";
+        return $this->id;
+    }
 
-        $query = $this->pdo->query($sql);
 
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+
+    public function getUserId(): int
+    {
+        return $this->userId;
+    }
+
+
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+
+    public function getAuthor(): string
+    {
+        return $this->author;
+    }
+
+
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+
+    public function getDisponibilite(): string
+    {
+        return $this->disponibilite;
     }
 }

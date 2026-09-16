@@ -1,15 +1,15 @@
 <?php
 
 require_once __DIR__ . '/../core/View.php';
-require_once __DIR__ . '/../models/Book.php';
+require_once __DIR__ . '/../managers/BookManager.php';
 
 class BookController
 {
     public function showBooks(): void
     {
-        $bookModel = new Book();
+        $bookManager = new BookManager();
 
-        $books = $bookModel->findAll();
+        $books = $bookManager->findAll();
 
         View::render('books', [
             'books' => $books
