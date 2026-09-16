@@ -8,14 +8,15 @@
 
         <div class="latest-books-list">
 
-    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
-    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+            <?php foreach ($books as $book): ?>
 
-</div>
+                <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
 
-        <a href="#">
+            <?php endforeach; ?>
+
+        </div>
+
+        <a href="/TomTroc-Project/?page=books">
             Voir tous les livres
         </a>
 

@@ -28,6 +28,28 @@ class BookManager
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function findLatest(int $limit = 4): array
+{
+    $sql = "
+        SELECT
+            books.*,
+            users.username
+        FROM books
+        JOIN users ON books.user_id = users.id
+        ORDER BY books.created_at DESC
+        LIMIT :limit
+    ";
+
+    $query = $this->pdo->prepare($sql);
+
+    $query->bindValue(':limit', $limit, PDO::PARAM_INT);
+
+    $query->execute();
+
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
     public function findById(int $id): ?array
     {
         $sql = "
