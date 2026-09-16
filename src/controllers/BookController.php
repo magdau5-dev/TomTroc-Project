@@ -18,6 +18,19 @@ class BookController
 
     public function showBook(): void
     {
-        View::render('singleBook');
+        $id = (int) ($_GET['id'] ?? 0);
+
+        $bookManager = new BookManager();
+
+        $book = $bookManager->findById($id);
+
+        if (!$book) {
+            View::render('notFound404');
+            return;
+        }
+
+        View::render('singleBook', [
+            'book' => $book
+        ]);
     }
 }

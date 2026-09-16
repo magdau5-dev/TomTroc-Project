@@ -3,7 +3,8 @@
     <div class="container">
 
         <p class="book-details-breadcrumb">
-            Nos livres &gt; The Kinfolk Table
+            Nos livres &gt;
+            <?= htmlspecialchars($book['title']) ?>
         </p>
 
     </div>
@@ -12,18 +13,21 @@
 
         <div class="book-details-image">
 
-           <!-- L'image du livre bdd -->
+            <img
+                src="/TomTroc-Project/public/img/books/<?= htmlspecialchars($book['image']) ?>"
+                alt="<?= htmlspecialchars($book['title']) ?>"
+            >
 
         </div>
 
         <div class="book-details-info">
 
             <h1>
-                The Kinfolk Table
+                <?= htmlspecialchars($book['title']) ?>
             </h1>
 
             <p class="book-details-author">
-                par Nathan Williams
+                par <?= htmlspecialchars($book['author']) ?>
             </p>
 
             <hr>
@@ -33,29 +37,7 @@
             </h2>
 
             <p>
-                J'ai récemment plongé dans les pages de 'The Kinfolk Table'
-                et j'ai été enchanté par cette œuvre captivante. Ce livre va
-                bien au-delà d'une simple collection de recettes ; il célèbre
-                l'art de partager des moments authentiques autour de la table.
-            </p>
-
-            <p>
-                Les photographies magnifiques et le ton chaleureux captivent
-                dès le départ, transportant le lecteur dans un voyage à travers
-                des recettes et des histoires qui mettent en avant la beauté
-                de la simplicité et de la convivialité.
-            </p>
-
-            <p>
-                Chaque page est une invitation à ralentir, à savourer et à créer
-                des souvenirs durables avec les êtres chers.
-            </p>
-
-            <p>
-                'The Kinfolk Table' incarne parfaitement l'esprit de la cuisine
-                et de la camaraderie, et il est certain que ce livre trouvera
-                une place spéciale dans le cœur de tout amoureux de la cuisine
-                et des rencontres inspirantes.
+                <?= nl2br(htmlspecialchars($book['description'])) ?>
             </p>
 
             <h2>
@@ -66,11 +48,11 @@
 
                 <img
                     src="/TomTroc-Project/public/img/user.png"
-                    alt="Photo de profil de Alexlecture"
+                    alt="Photo de profil de <?= htmlspecialchars($book['username']) ?>"
                 >
 
                 <span>
-                    Alexlecture
+                    <?= htmlspecialchars($book['username']) ?>
                 </span>
 
             </a>
