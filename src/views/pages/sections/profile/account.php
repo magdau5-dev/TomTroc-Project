@@ -2,7 +2,10 @@
 
     <div class="container">
 
-        <h1>Mon compte</h1>
+        <h1>
+            Mon compte
+        </h1>
+
 
         <div class="account-top">
 
@@ -28,11 +31,15 @@
                 <hr>
 
                 <h2>
-                    nathalire
+                    <?= htmlspecialchars($user['username']) ?>
                 </h2>
 
                 <p>
-                    Membre depuis 1 an
+                    Membre depuis le
+                    <?= date(
+                        'd/m/Y',
+                        strtotime($user['created_at'])
+                    ) ?>
                 </p>
 
                 <span>
@@ -40,10 +47,12 @@
                 </span>
 
                 <p>
-                    4 livres
+                    <?= count($books) ?>
+                    <?= count($books) > 1 ? 'livres' : 'livre' ?>
                 </p>
 
             </article>
+
 
             <article class="account-infos">
 
@@ -60,8 +69,9 @@
                     <input
                         type="email"
                         id="account-email"
-                        value="nathalie@mail.com"
+                        value="<?= htmlspecialchars($user['email']) ?>"
                     >
+
 
                     <label for="account-password">
                         Mot de passe
@@ -70,8 +80,9 @@
                     <input
                         type="password"
                         id="account-password"
-                        value="password"
+                        placeholder="********"
                     >
+
 
                     <label for="account-username">
                         Pseudo
@@ -80,8 +91,9 @@
                     <input
                         type="text"
                         id="account-username"
-                        value="nathalire"
+                        value="<?= htmlspecialchars($user['username']) ?>"
                     >
+
 
                     <button type="submit">
                         Enregistrer
@@ -93,11 +105,13 @@
 
         </div>
 
+
         <div class="account-books">
 
             <table>
 
                 <thead>
+
                     <tr>
                         <th>PHOTO</th>
                         <th>TITRE</th>
@@ -106,109 +120,103 @@
                         <th>DISPONIBILITÉ</th>
                         <th>ACTION</th>
                     </tr>
+
                 </thead>
+
 
                 <tbody>
 
-                    <tr>
-                        <td>
-                            <div class="account-book-image"></div>
-                        </td>
+                    <?php if (empty($books)): ?>
 
-                        <td>The Kinfolk Table</td>
+                        <tr>
 
-                        <td>Nathan Williams</td>
+                            <td colspan="6">
+                                Aucun livre dans votre bibliothèque.
+                            </td>
 
-                        <td>
-                            J'ai récemment plongé dans les pages...
-                        </td>
+                        </tr>
 
-                        <td>
-                            <span class="available">
-                                disponible
-                            </span>
-                        </td>
+                    <?php else: ?>
 
-                        <td>
-                            <a href="#">Éditer</a>
-                            <a href="#">Supprimer</a>
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>
-                            <div class="account-book-image"></div>
-                        </td>
+                        <?php foreach ($books as $book): ?>
 
-                        <td>The Kinfolk Table</td>
+                            <tr>
 
-                        <td>Nathan Williams</td>
+                                <td>
 
-                        <td>
-                            J'ai récemment plongé dans les pages...
-                        </td>
+                                    <div class="account-book-image">
 
-                        <td>
-                            <span class="unavailable">
-                                non dispo.
-                            </span>
-                        </td>
+                                        <?php if (!empty($book['image'])): ?>
 
-                        <td>
-                            <a href="#">Éditer</a>
-                            <a href="#">Supprimer</a>
-                        </td>
-                    </tr>
+                                            <img
+                                                src="/TomTroc-Project/public/img/books/<?= htmlspecialchars($book['image']) ?>"
+                                                alt="<?= htmlspecialchars($book['title']) ?>"
+                                            >
 
-                    <tr>
-                        <td>
-                            <div class="account-book-image"></div>
-                        </td>
+                                        <?php endif; ?>
 
-                        <td>The Kinfolk Table</td>
+                                    </div>
 
-                        <td>Nathan Williams</td>
+                                </td>
 
-                        <td>
-                            J'ai récemment plongé dans les pages...
-                        </td>
 
-                        <td>
-                            <span class="available">
-                                disponible
-                            </span>
-                        </td>
+                                <td>
+                                    <?= htmlspecialchars($book['title']) ?>
+                                </td>
 
-                        <td>
-                            <a href="#">Éditer</a>
-                            <a href="#">Supprimer</a>
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>
-                            <div class="account-book-image"></div>
-                        </td>
+                                <td>
+                                    <?= htmlspecialchars($book['author']) ?>
+                                </td>
 
-                        <td>The Kinfolk Table</td>
 
-                        <td>Nathan Williams</td>
+                                <td>
 
-                        <td>
-                            J'ai récemment plongé dans les pages...
-                        </td>
+                                    <p class="account-book-description">
+                                        <?= htmlspecialchars($book['description']) ?>
+                                    </p>
 
-                        <td>
-                            <span class="unavailable">
-                                non dispo.
-                            </span>
-                        </td>
+                                </td>
 
-                        <td>
-                            <a href="#">Éditer</a>
-                            <a href="#">Supprimer</a>
-                        </td>
-                    </tr>
+
+                                <td>
+
+                                    <?php if ($book['disponibilite'] === 'disponible'): ?>
+
+                                        <span class="available">
+                                            disponible
+                                        </span>
+
+                                    <?php else: ?>
+
+                                        <span class="unavailable">
+                                            non dispo.
+                                        </span>
+
+                                    <?php endif; ?>
+
+                                </td>
+
+
+                                <td>
+
+                                    <a href="#">
+                                        Éditer
+                                    </a>
+
+                                    <a href="#">
+                                        Supprimer
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+                        <?php endforeach; ?>
+
+
+                    <?php endif; ?>
 
                 </tbody>
 

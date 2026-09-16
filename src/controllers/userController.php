@@ -107,19 +107,23 @@ class UserController
             exit;
         }
 
-        $userManager = new UserManager();
+        $userId = (int) $_SESSION['user_id'];
 
-        $user = $userManager->findById(
-            (int) $_SESSION['user_id']
-        );
+        $userManager = new UserManager();
+        $bookManager = new BookManager();
+
+        $user = $userManager->findById($userId);
 
         if (!$user) {
             header('Location: /TomTroc-Project/?page=connexion');
             exit;
         }
 
+        $books = $bookManager->findByUserId($userId);
+
         View::render('profile', [
-            'user' => $user
+            'user' => $user,
+            'books' => $books
         ]);
     }
 }
