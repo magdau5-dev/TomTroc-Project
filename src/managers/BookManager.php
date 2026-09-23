@@ -71,6 +71,20 @@ class BookManager
         ]);
     }
 
+    public function deleteBook(int $id): void
+    {
+        $sql = "
+            DELETE FROM books
+            WHERE id = :id
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'id' => $id
+        ]);
+    }
+
     public function findAll(): array
     {
         $sql = "

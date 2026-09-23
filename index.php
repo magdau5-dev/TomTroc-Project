@@ -36,6 +36,11 @@ switch ($page) {
         $controller->showEditBook();
         break;
 
+    case 'deleteBook':
+        $controller = new BookController();
+        $controller->deleteBook();
+        break;
+
     case 'connexion':
         $controller = new UserController();
         $controller->showLogin();

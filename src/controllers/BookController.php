@@ -145,4 +145,28 @@ class BookController
             'book' => $book
         ]);
     }
+
+    public function deleteBook(): void
+    {
+        $id = (int) ($_GET['id'] ?? 0);
+
+        $bookManager = new BookManager();
+
+        $book = $bookManager->findById($id);
+
+        if (!$book) {
+            View::render('notFound404');
+            return;
+        }
+
+        if ($book['user_id'] != $_SESSION['user_id']) {
+            header('Location: /TomTroc-Project/?page=profile');
+            exit;
+        }
+
+        $bookManager->deleteBook($id);
+
+        header('Location: /TomTroc-Project/?page=profile');
+        exit;
+    }
 }

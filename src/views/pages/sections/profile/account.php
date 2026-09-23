@@ -212,7 +212,7 @@
                                         Éditer
                                     </a>
 
-                                    <a href="#">
+                                    <a href="/TomTroc-Project/?page=deleteBook&id=<?= $book['id'] ?>">
                                         Supprimer
                                     </a>
 
