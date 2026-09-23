@@ -1270,3 +1270,133 @@ nav > div:last-of-type a:first-child span:last-child {
 
     object-fit: cover;
 }
+
+/* btn Ajouter un livre */
+.account-profile .add-book-button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #00ac66;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ========================= */
+/* PAGE AJOUT D'UN LIVRE */
+/* ========================= */
+
+/* Conteneur principal */
+.add-book-page {
+    padding: 40px 0 80px;
+}
+
+/* Centre le contenu */
+.add-book-container {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.back-link {
+    color: #a6a6a6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.add-book-page h1 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 25px 0;
+}
+
+/* background blanc */
+.add-book-form {
+    background-color: white;
+    border-radius: 15px;
+    padding: 45px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+/* Colonne de l'image */
+.add-book-image {
+    display: flex;
+    flex-direction: column;
+}
+
+/* style des labels */
+.add-book-image label,
+.add-book-infos label {
+    color: #a6a6a6;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Style de la zone d'ajout d'image */
+.add-book-image input[type="file"] {
+    width: 100%;
+    min-height: 400px;
+
+    background-color: #f2f4f6;
+    border: none;
+}
+
+/* Colonne de droite ses infos */
+.add-book-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* champs du formulaire */
+.add-book-infos input,
+.add-book-infos textarea,
+.add-book-infos select {
+    width: 100%;
+
+    background-color: #edf2f5;
+    border: none;
+    border-radius: 5px;
+
+    padding: 15px;
+    margin-bottom: 25px;
+
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.add-book-infos input,
+.add-book-infos select {
+    height: 50px;
+}
+
+/* zone de commentaire */
+.add-book-infos textarea {
+    height: 180px;
+    resize: none;
+}
+
+/* btn Ajouter un livre */
+.add-book-infos button {
+    width: 75%;
+    height: 55px;
+
+    margin-top: 15px;
+
+    background-color: #00ac66;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* hover btn Ajouter un livre */
+.add-book-infos button:hover {
+    background-color: #009d5d;
+}

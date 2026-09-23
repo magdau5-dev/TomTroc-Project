@@ -40,4 +40,9 @@ class BookController
             'book' => $book
         ]);
     }
+
+    public function showAddBook(): void
+    {
+        View::render('addBook');
+    }
 }

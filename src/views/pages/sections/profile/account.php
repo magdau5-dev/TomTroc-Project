@@ -51,6 +51,13 @@
                     <?= count($books) > 1 ? 'livres' : 'livre' ?>
                 </p>
 
+                <a
+                    href="/TomTroc-Project/?page=addBook"
+                    class="add-book-button"
+                >
+                    Ajouter un livre
+                </a>
+
             </article>
 
 
