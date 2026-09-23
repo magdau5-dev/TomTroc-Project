@@ -30,6 +30,11 @@ switch ($page) {
         $controller = new BookController();
         $controller->showAddBook();
         break;
+    
+    case 'editBook':
+        $controller = new BookController();
+        $controller->showEditBook();
+        break;
 
     case 'connexion':
         $controller = new UserController();

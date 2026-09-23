@@ -88,4 +88,61 @@ class BookController
 
         View::render('addBook');
     }
+
+    public function showEditBook(): void
+    {
+        $id = (int) ($_GET['id'] ?? 0);
+
+        $bookManager = new BookManager();
+
+        $book = $bookManager->findById($id);
+
+        if (!$book) {
+            View::render('notFound404');
+            return;
+        }
+
+        // Le bon livre au bon utilisateur connecté
+        if ($book['user_id'] != $_SESSION['user_id']) {
+            header('Location: /TomTroc-Project/?page=profile');
+            exit;
+        }
+
+        if (isset($_POST['btnEditBook'])) {
+
+            $title = $_POST['title'];
+            $author = $_POST['author'];
+            $description = $_POST['description'];
+            $disponibilite = $_POST['disponibilite'];
+
+            $image = $book['image'];
+            if (!empty($_FILES['image']['name'])) {
+                $image = $_FILES['image']['name'];
+                move_uploaded_file(
+                    $_FILES['image']['tmp_name'],
+                    __DIR__ . '/../../public/img/books/' . $image
+                );
+            }
+
+            $userId = $_SESSION['user_id'];
+
+            $updatedBook = new Book(
+                $userId,
+                $title,
+                $author,
+                $description,
+                $image,
+                $disponibilite
+            );
+
+            $bookManager->updateBook($id, $updatedBook);
+
+            header('Location: /TomTroc-Project/?page=profile');
+            exit;
+        }
+
+        View::render('editBook', [
+            'book' => $book
+        ]);
+    }
 }

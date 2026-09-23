@@ -46,6 +46,31 @@ class BookManager
         ]);
     }
 
+    public function updateBook($id, Book $book): void
+    {
+        $sql = "
+            UPDATE books
+            SET
+                title = :title,
+                author = :author,
+                description = :description,
+                image = :image,
+                disponibilite = :disponibilite
+            WHERE id = :id
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'title' => $book->getTitle(),
+            'author' => $book->getAuthor(),
+            'description' => $book->getDescription(),
+            'image' => $book->getImage(),
+            'disponibilite' => $book->getDisponibilite(),
+            'id' => $id
+        ]);
+    }
+
     public function findAll(): array
     {
         $sql = "

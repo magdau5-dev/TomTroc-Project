@@ -208,7 +208,7 @@
 
                                 <td>
 
-                                    <a href="#">
+                                    <a href="/TomTroc-Project/?page=editBook&id=<?= $book['id'] ?>">
                                         Éditer
                                     </a>
 
