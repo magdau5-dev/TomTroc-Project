@@ -14,18 +14,33 @@
             class="add-book-form"
             method="POST"
             action="/TomTroc-Project/?page=addBook"
+            enctype="multipart/form-data"  
         >
+            <!-- enctype sert à permettre l'envoi de fichiers via le formulaire -->
 
             <div class="add-book-image">
 
-                <label for="book-image">
+                <p class="image-title">
                     Photo
+                </p>
+
+                <img
+                    src="/TomTroc-Project/public/img/books/noImage.png"
+                    alt="Aperçu du livre"
+                    id="image-preview"
+                    class="image-preview"
+                >
+
+                <label for="book-image" class="change-image">
+                    Modifier la photo
                 </label>
 
                 <input
                     type="file"
                     id="book-image"
                     name="image"
+                    accept="image/*"
+                    class="image-input"
                 >
 
             </div>
@@ -92,3 +107,18 @@
     </div>
 
 </section>
+
+<script>
+    const imageInput = document.getElementById('book-image');
+    const imagePreview = document.getElementById('image-preview');
+
+    imageInput.addEventListener('change', function () {
+
+        const image = imageInput.files[0];
+
+        if (image) {
+            imagePreview.src = URL.createObjectURL(image);
+        }
+
+    });
+</script>

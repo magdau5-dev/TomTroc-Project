@@ -51,6 +51,23 @@ class BookController
             $description = $_POST['description'];
             $disponibilite = $_POST['disponibilite'];
 
+            $image = 'noImage.png';
+            // $_FILES = tous les fichiers envoyés par le formulaire 
+            // ['image'] correspond au champ "name" de l'input type="file" 
+            // ['name'] = nom du fichier inséré par l'utilisateur
+            
+            if (!empty($_FILES['image']['name'])) {
+
+
+                $image = $_FILES['image']['name'];
+
+                // ['tmp_name'] = emplacement temporaire du fichier sur le serveur
+                move_uploaded_file(
+                    $_FILES['image']['tmp_name'],
+                    __DIR__ . '/../../public/img/books/' . $image // chemin de destination final du fichier sur le serveur
+                );
+            }
+
             $userId = $_SESSION['user_id'];
 
             $book = new Book(
@@ -58,7 +75,7 @@ class BookController
                 $title,
                 $author,
                 $description,
-                null,
+                $image,
                 $disponibilite
             );
 
