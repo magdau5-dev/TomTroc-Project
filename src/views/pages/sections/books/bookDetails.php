@@ -44,10 +44,10 @@
                 PROPRIÉTAIRE
             </h2>
 
-            <a href="#" class="book-details-owner">
+            <div class="book-details-owner">
 
                 <img
-                    src="/TomTroc-Project/public/img/user.png"
+                    src="/TomTroc-Project/public/img/avatars/<?= htmlspecialchars($book['avatar']) ?>"
                     alt="Photo de profil de <?= htmlspecialchars($book['username']) ?>"
                 >
 
@@ -55,7 +55,7 @@
                     <?= htmlspecialchars($book['username']) ?>
                 </span>
 
-            </a>
+            </div>
 
             <a href="#" class="book-details-message">
                 Envoyer un message
