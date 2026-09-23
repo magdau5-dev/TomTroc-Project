@@ -90,4 +90,29 @@ class BookManager
 
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function searchByTitle(string $search): array
+    { 
+        // LOWER = convertit en minuscule pour effectuer une recherche
+        // exemples dans la barre de recherche ce qui fonctionnera : 
+        // The Kinfolk Table
+        // the kinfolk table
+        // THE KINFOLK TABLE
+        // tHe KiNfOlK tAbLe
+        
+        $sql = "
+            SELECT books.*, users.username
+            FROM books
+            JOIN users ON books.user_id = users.id
+            WHERE LOWER(books.title) = LOWER(:search)
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'search' => $search
+        ]);
+
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

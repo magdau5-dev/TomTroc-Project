@@ -9,7 +9,14 @@ class BookController
     {
         $bookManager = new BookManager();
 
-        $books = $bookManager->findAll();
+        // Récupération de la valeur de recherche depuis la barre de recherche | trim = supprime les espaces avant et après la chaîne
+        $search = trim($_GET['search'] ?? '');
+
+        if ($search) {
+            $books = $bookManager->searchByTitle($search);
+        } else {
+            $books = $bookManager->findAll();
+        }
 
         View::render('books', [
             'books' => $books
