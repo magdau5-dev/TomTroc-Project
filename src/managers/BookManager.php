@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../models/Database.php';
+require_once __DIR__ . '/../models/Book.php';
 
 class BookManager
 {
@@ -10,6 +11,39 @@ class BookManager
     {
         $database = new Database();
         $this->pdo = $database->getConnection();
+    }
+
+    public function createBook(Book $book): void
+    {
+        $sql = "
+            INSERT INTO books (
+                user_id,
+                title,
+                author,
+                description,
+                image,
+                disponibilite
+            )
+            VALUES (
+                :user_id,
+                :title,
+                :author,
+                :description,
+                :image,
+                :disponibilite
+            )
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'user_id' => $book->getUserId(),
+            'title' => $book->getTitle(),
+            'author' => $book->getAuthor(),
+            'description' => $book->getDescription(),
+            'image' => $book->getImage(),
+            'disponibilite' => $book->getDisponibilite()
+        ]);
     }
 
     public function findAll(): array

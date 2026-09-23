@@ -10,7 +10,11 @@
             Ajouter un livre
         </h1>
 
-        <form class="add-book-form">
+        <form
+            class="add-book-form"
+            method="POST"
+            action="/TomTroc-Project/?page=addBook"
+        >
 
             <div class="add-book-image">
 
@@ -36,6 +40,7 @@
                     type="text"
                     id="book-title"
                     name="title"
+                    required
                 >
 
                 <label for="book-author">
@@ -46,6 +51,7 @@
                     type="text"
                     id="book-author"
                     name="author"
+                    required
                 >
 
                 <label for="book-description">
@@ -55,6 +61,7 @@
                 <textarea
                     id="book-description"
                     name="description"
+                    required
                 ></textarea>
 
                 <label for="book-availability">
@@ -74,7 +81,7 @@
                     </option>
                 </select>
 
-                <button type="submit">
+                <button type="submit" name="btnAddBook">
                     Ajouter
                 </button>
 

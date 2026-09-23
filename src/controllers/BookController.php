@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../core/View.php';
 require_once __DIR__ . '/../managers/BookManager.php';
+require_once __DIR__ . '/../models/Book.php';
 
 class BookController
 {
@@ -43,6 +44,31 @@ class BookController
 
     public function showAddBook(): void
     {
+        if (isset($_POST['btnAddBook'])) {
+
+            $title = $_POST['title'];
+            $author = $_POST['author'];
+            $description = $_POST['description'];
+            $disponibilite = $_POST['disponibilite'];
+
+            $userId = $_SESSION['user_id'];
+
+            $book = new Book(
+                $userId,
+                $title,
+                $author,
+                $description,
+                null,
+                $disponibilite
+            );
+
+            $bookManager = new BookManager();
+            $bookManager->createBook($book);
+
+            header('Location: /TomTroc-Project/?page=profile');
+            exit;
+        }
+
         View::render('addBook');
     }
 }
