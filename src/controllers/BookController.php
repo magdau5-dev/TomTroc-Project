@@ -164,6 +164,16 @@ class BookController
             exit;
         }
 
+        // Supprime l'image du dossier img/books mais pas celle par défaut
+        if ($book['image'] != 'noImage.png') {
+
+            $imagePath = __DIR__ . '/../../public/img/books/' . $book['image'];
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+
         $bookManager->deleteBook($id);
 
         header('Location: /TomTroc-Project/?page=profile');
