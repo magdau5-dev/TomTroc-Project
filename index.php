@@ -46,6 +46,11 @@ switch ($page) {
         $controller->showLogin();
         break;
 
+    case 'logout':
+        $controller = new UserController();
+        $controller->logout();
+        break;
+
     case 'inscription':
         $controller = new UserController();
         $controller->showRegister();

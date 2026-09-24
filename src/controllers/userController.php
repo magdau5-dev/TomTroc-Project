@@ -101,6 +101,13 @@ class UserController
         exit;
     }
 
+    public function logout(): void
+    {
+        session_destroy();
+        header('Location: /TomTroc-Project/?page=connexion');
+        exit;
+    }
+
     public function showProfile(): void
     {
         if (!isset($_SESSION['user_id'])) {
@@ -127,7 +134,7 @@ class UserController
             'books' => $books
         ]);
     }
-    
+
     public function showPublicProfile(): void
     {
         $userId = (int) ($_GET['id'] ?? 0);

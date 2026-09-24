@@ -24,9 +24,19 @@
             <span>Mon compte</span>
         </a>
 
-        <a href="/TomTroc-Project/?page=connexion">
-            Connexion
-        </a>
+        <?php if (isset($_SESSION['user_id'])): ?>
+
+            <a href="/TomTroc-Project/?page=logout">
+                Déconnexion
+            </a>
+
+        <?php else: ?>
+
+            <a href="/TomTroc-Project/?page=connexion">
+                Connexion
+            </a>
+
+        <?php endif; ?>
     </div>
 
 </nav>
