@@ -6,6 +6,7 @@ require_once __DIR__ . '/src/controllers/HomeController.php';
 require_once __DIR__ . '/src/controllers/BookController.php';
 require_once __DIR__ . '/src/controllers/UserController.php';
 require_once __DIR__ . '/src/controllers/ErrorController.php';
+require_once __DIR__ . '/src/controllers/MessageController.php';
 
 $page = $_GET['page'] ?? 'home';
 
@@ -65,6 +66,11 @@ switch ($page) {
         $controller = new UserController();
         $controller->showPublicProfile();
         break;
+
+    case 'chat':
+        $controller = new MessageController();
+        $controller->showConversation();
+        break;    
 
     default:
         $controller = new ErrorController();

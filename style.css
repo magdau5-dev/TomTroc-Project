@@ -6,8 +6,8 @@
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 /* Conteneur principal pour centrer le contenu */
@@ -253,30 +253,30 @@ nav > div:last-of-type a:first-child span:last-child {
 }
 
 .account-book-image {
-    width: 65px;
-    height: 85px;
+	width: 65px;
+	height: 85px;
 
-    overflow: hidden;
+	overflow: hidden;
 
-    background-color: #e9e7e2;
+	background-color: #e9e7e2;
 }
 
 .account-book-image img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 
-    display: block;
+	display: block;
 
-    object-fit: cover;
+	object-fit: cover;
 }
 
 .account-book-description {
-    width: 260px;
+	width: 260px;
 
-    overflow: hidden;
+	overflow: hidden;
 
-    white-space: nowrap;
-    text-overflow: ellipsis;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 /* ========================= */
@@ -566,11 +566,10 @@ nav > div:last-of-type a:first-child span:last-child {
 }
 
 .book-card-link {
-    display: block;
-    color: inherit;
-    text-decoration: none;
+	display: block;
+	color: inherit;
+	text-decoration: none;
 }
-
 
 /* Emplacement de l'image */
 .book-card-image {
@@ -645,21 +644,21 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Zone réservée à l'image du livre */
 .book-details-image {
-    width: 50%;
-    height: 863px;
+	width: 50%;
+	height: 863px;
 
-    overflow: hidden;
-    background-color: #e9e7e2;
+	overflow: hidden;
+	background-color: #e9e7e2;
 }
 
 .book-details-image img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 
-    display: block;
+	display: block;
 
-    object-fit: cover;
-    object-position: center;
+	object-fit: cover;
+	object-position: center;
 }
 
 /* Partie droite avec les informations */
@@ -1250,35 +1249,35 @@ nav > div:last-of-type a:first-child span:last-child {
 }
 
 .account-avatar {
-    width: 110px;
-    height: 110px;
+	width: 110px;
+	height: 110px;
 
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 
-    background-color: #e9e7e2;
+	background-color: #e9e7e2;
 
-    border-radius: 50%;
+	border-radius: 50%;
 
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .account-avatar img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 
-    display: block;
+	display: block;
 
-    object-fit: cover;
+	object-fit: cover;
 }
 
 /* btn Ajouter un livre */
 .account-profile .add-book-button {
-    margin-top: 10px;
-    padding: 12px 20px;
-    background-color: #00ac66;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+	margin-top: 10px;
+	padding: 12px 20px;
+	background-color: #00ac66;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
 }
 
 /* ========================= */
@@ -1287,149 +1286,146 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Conteneur principal */
 .add-book-page {
-    padding: 40px 0 80px;
+	padding: 40px 0 80px;
 }
 
 /* Centre le contenu */
 .add-book-container {
-    width: 80%;
-    max-width: 1100px;
-    margin: auto;
+	width: 80%;
+	max-width: 1100px;
+	margin: auto;
 }
 
 .back-link {
-    color: #a6a6a6;
-    text-decoration: none;
-    font-size: 14px;
+	color: #a6a6a6;
+	text-decoration: none;
+	font-size: 14px;
 }
 
 .add-book-page h1 {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 25px 0;
+	font-size: 26px;
+	font-weight: 400;
+	margin: 25px 0;
 }
 
 /* background blanc */
 .add-book-form {
-    background-color: white;
-    border-radius: 15px;
-    padding: 45px;
+	background-color: white;
+	border-radius: 15px;
+	padding: 45px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 70px;
 }
 
 /* Colonne de l'image */
 .add-book-image {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* style des labels */
 .add-book-image label,
 .add-book-infos label {
-    color: #a6a6a6;
-    font-size: 14px;
-    margin-bottom: 8px;
+	color: #a6a6a6;
+	font-size: 14px;
+	margin-bottom: 8px;
 }
 
 /* Titre Photo */
 .image-title {
-    color: #a6a6a6;
-    font-size: 14px;
-    margin-bottom: 8px;
+	color: #a6a6a6;
+	font-size: 14px;
+	margin-bottom: 8px;
 }
-
 
 /* Aperçu de l'image du livre */
 .image-preview {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
 }
-
 
 /* Cache le champ Choisir un fichier */
 .image-input {
-    display: none;
+	display: none;
 }
-
 
 /* Texte permettant de choisir une autre image */
 .change-image {
-    margin-top: 10px;
-    text-align: right;
-    text-decoration: underline;
-    cursor: pointer;
-    color: #292929;
-    font-size: 13px;
+	margin-top: 10px;
+	text-align: right;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #292929;
+	font-size: 13px;
 }
 
 /* Colonne de droite ses infos */
 .add-book-infos {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* champs du formulaire */
 .add-book-infos input,
 .add-book-infos textarea,
 .add-book-infos select {
-    width: 100%;
+	width: 100%;
 
-    background-color: #edf2f5;
-    border: none;
-    border-radius: 5px;
+	background-color: #edf2f5;
+	border: none;
+	border-radius: 5px;
 
-    padding: 15px;
-    margin-bottom: 25px;
+	padding: 15px;
+	margin-bottom: 25px;
 
-    box-sizing: border-box;
-    font-size: 14px;
+	box-sizing: border-box;
+	font-size: 14px;
 }
 
 .add-book-infos input,
 .add-book-infos select {
-    height: 50px;
+	height: 50px;
 }
 
 /* zone de commentaire */
 .add-book-infos textarea {
-    height: 180px;
-    resize: none;
+	height: 180px;
+	resize: none;
 }
 
 /* btn Ajouter un livre */
 .add-book-infos button {
-    width: 75%;
-    height: 55px;
+	width: 75%;
+	height: 55px;
 
-    margin-top: 15px;
+	margin-top: 15px;
 
-    background-color: #00ac66;
-    color: white;
+	background-color: #00ac66;
+	color: white;
 
-    border: none;
-    border-radius: 8px;
+	border: none;
+	border-radius: 8px;
 
-    font-size: 16px;
-    font-weight: bold;
+	font-size: 16px;
+	font-weight: bold;
 
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /* Aperçu de la couverture du livre */
 .image-preview {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    margin-bottom: 15px;
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	margin-bottom: 15px;
 }
 
 /* hover btn Ajouter un livre */
 .add-book-infos button:hover {
-    background-color: #009d5d;
+	background-color: #009d5d;
 }
 
 /* ========================= */
@@ -1438,178 +1434,434 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Page du profil public */
 .public-profile-page {
-    padding: 100px 0 150px;
+	padding: 100px 0 150px;
 }
-
 
 /* Contient le profil à gauche et les livres à droite */
 .public-profile-container {
-    width: 80%;
-    max-width: 1140px;
-    margin: auto;
+	width: 80%;
+	max-width: 1140px;
+	margin: auto;
 
-    display: flex;
-    align-items: flex-start;
-    gap: 28px;
+	display: flex;
+	align-items: flex-start;
+	gap: 28px;
 }
-
 
 /* Carte contenant les informations de l'utilisateur */
 .public-profile-user {
-    width: 340px;
-    min-width: 340px;
-    min-height: 580px;
+	width: 340px;
+	min-width: 340px;
+	min-height: 580px;
 
-    background-color: white;
-    border-radius: 15px;
+	background-color: white;
+	border-radius: 15px;
 
-    padding: 45px 50px;
-    box-sizing: border-box;
+	padding: 45px 50px;
+	box-sizing: border-box;
 
-    text-align: center;
+	text-align: center;
 }
-
 
 /* Avatar de l'utilisateur */
 .public-profile-avatar {
-    width: 140px;
-    height: 140px;
+	width: 140px;
+	height: 140px;
 
-    border-radius: 50%;
-    object-fit: cover;
+	border-radius: 50%;
+	object-fit: cover;
 
-    margin-bottom: 65px;
+	margin-bottom: 65px;
 }
-
 
 /* Ligne sous l'avatar */
 .public-profile-line {
-    width: 100%;
-    height: 1px;
+	width: 100%;
+	height: 1px;
 
-    background-color: #e9e9e9;
+	background-color: #e9e9e9;
 
-    margin-bottom: 45px;
+	margin-bottom: 45px;
 }
-
 
 /* Pseudo */
 .public-profile-username {
-    margin: 0 0 10px;
+	margin: 0 0 10px;
 
-    font-size: 24px;
-    font-weight: 400;
+	font-size: 24px;
+	font-weight: 400;
 }
-
 
 /* Ancienneté */
 .public-profile-member {
-    margin: 0 0 28px;
+	margin: 0 0 28px;
 
-    color: #a6a6a6;
-    font-size: 14px;
+	color: #a6a6a6;
+	font-size: 14px;
 }
-
 
 /* Titre bibliothèque */
 .public-profile-library-title {
-    margin: 0 0 8px;
+	margin: 0 0 8px;
 
-    font-size: 10px;
-    font-weight: 600;
+	font-size: 10px;
+	font-weight: 600;
 }
-
 
 /* Nombre de livres */
 .public-profile-library-count {
-    margin: 0 0 45px;
+	margin: 0 0 45px;
 
-    font-size: 14px;
+	font-size: 14px;
 }
-
 
 /* Bouton écrire un message */
 .public-profile-message {
-    display: block;
+	display: block;
 
-    width: 215px;
-    margin: auto;
+	width: 215px;
+	margin: auto;
 
-    padding: 18px 10px;
+	padding: 18px 10px;
 
-    border: 1px solid #00ac66;
-    border-radius: 8px;
+	border: 1px solid #00ac66;
+	border-radius: 8px;
 
-    color: #00ac66;
-    text-decoration: none;
+	color: #00ac66;
+	text-decoration: none;
 
-    font-size: 14px;
-    font-weight: 600;
+	font-size: 14px;
+	font-weight: 600;
 
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 
 /* Tableau des livres */
 .public-profile-books {
-    flex: 1;
+	flex: 1;
 
-    background-color: white;
+	background-color: white;
 
-    border-collapse: collapse;
-    border-radius: 15px;
-    overflow: hidden;
+	border-collapse: collapse;
+	border-radius: 15px;
+	overflow: hidden;
 }
-
 
 /* En-tête du tableau */
 .public-profile-books th {
-    height: 50px;
+	height: 50px;
 
-    padding: 0 30px;
+	padding: 0 30px;
 
-    text-align: left;
+	text-align: left;
 
-    font-size: 9px;
-    font-weight: 600;
+	font-size: 9px;
+	font-weight: 600;
 }
-
 
 /* Cellules du tableau */
 .public-profile-books td {
-    height: 128px;
+	height: 128px;
 
-    padding: 0 30px;
+	padding: 0 30px;
 
-    vertical-align: middle;
+	vertical-align: middle;
 
-    font-size: 13px;
+	font-size: 13px;
 
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 
 /* Une ligne sur deux avec un fond gris clair */
 .public-profile-books tbody tr:nth-child(even) {
-    background-color: #edf2f5;
+	background-color: #edf2f5;
 }
-
 
 /* Image d'un livre */
 .public-profile-book-image {
-    width: 78px;
-    height: 80px;
+	width: 78px;
+	height: 80px;
 
-    object-fit: cover;
+	object-fit: cover;
 }
-
 
 /* Description du livre */
 .public-profile-description {
-    width: 220px;
+	width: 220px;
 
-    font-size: 12px;
-    line-height: 1.35;
+	font-size: 12px;
+	line-height: 1.35;
 
-    font-style: italic;
+	font-style: italic;
+}
+
+/* ========================= */
+/* PAGE CHAT */
+/* ========================= */
+
+.chat-page {
+	background-color: #f5f3ef;
+}
+
+/* Conteneur principal du chat */
+.chat-container {
+	width: 100%;
+	max-width: 1400px;
+	margin: auto;
+
+	display: flex;
+
+	min-height: 700px;
+
+	box-sizing: border-box;
+}
+
+/* Liste des conversations */
+.chat-list {
+	width: 340px;
+	flex-shrink: 0;
+
+	background-color: #faf9f7;
+	padding: 50px 30px;
+
+	box-sizing: border-box;
+}
+
+.chat-list-title {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 28px;
+
+	margin-bottom: 30px;
+}
+
+.chat-list-item {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+
+	padding: 14px;
+	border-radius: 10px;
+	margin-bottom: 8px;
+
+	text-decoration: none;
+	color: inherit;
+}
+
+.chat-list-item:hover,
+.chat-list-item-active {
+	background-color: #ffffff;
+}
+
+.chat-list-avatar {
+	width: 48px;
+	height: 48px;
+	flex-shrink: 0;
+
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.chat-list-info {
+	min-width: 0;
+	flex: 1;
+}
+
+.chat-list-top {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.chat-list-username {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.chat-list-time {
+	font-size: 11px;
+	color: #a6a6a6;
+	white-space: nowrap;
+}
+
+.chat-list-preview {
+	font-size: 12px;
+	color: #a6a6a6;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Fenêtre de la conversation active */
+.chat-window {
+	flex: 1;
+	min-width: 0;
+
+	background-color: #f5f3ef;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 50px 60px;
+
+	box-sizing: border-box;
+}
+
+/* Utilisateur avec qui on discute */
+.chat-user {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	margin-bottom: 40px;
+}
+
+/* Avatar principal de l'utilisateur */
+.chat-user-avatar {
+	width: 42px;
+	height: 42px;
+
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+/* Nom de l'utilisateur */
+.chat-user-name {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/* Zone contenant les messages */
+.chat-messages {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	overflow-y: auto;
+
+	margin-bottom: 30px;
+}
+
+/* Pousse les messages vers le bas */
+.chat-messages > :first-child {
+	margin-top: auto;
+}
+
+/* Message envoyé */
+.message-sent {
+	max-width: 60%;
+
+	align-self: flex-end;
+	text-align: right;
+}
+
+/* Message reçu */
+.message-received {
+	max-width: 60%;
+
+	align-self: flex-start;
+}
+
+/* Informations du message reçu */
+.message-received-info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	margin-bottom: 6px;
+}
+
+/* Petit avatar à côté des messages reçus */
+.message-avatar {
+	width: 24px;
+	height: 24px;
+
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+/* Date des messages */
+.message-date {
+	display: inline-block;
+
+	font-size: 11px;
+	color: #a6a6a6;
+
+	margin-bottom: 6px;
+}
+
+.message-sent .message-date {
+	margin-right: 2px;
+}
+
+/* Bulle des messages */
+.message-sent p {
+	margin: 0;
+
+	padding: 14px 18px;
+
+	background-color: #e7edf8;
+
+	border-radius: 12px 12px 0 12px;
+
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: left;
+}
+
+.message-received p {
+	margin: 0;
+
+	padding: 14px 18px;
+
+	background-color: #ffffff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+	border-radius: 12px 12px 12px 0;
+
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+/* Formulaire d'envoi */
+.chat-form {
+	display: flex;
+	gap: 15px;
+}
+
+/* Champ texte */
+.chat-form input {
+	flex: 1;
+
+	padding: 16px 22px;
+
+	border: 1px solid #e5e2da;
+	border-radius: 8px;
+
+	background-color: #ffffff;
+
+	font-size: 14px;
+}
+
+/* Bouton envoyer */
+.chat-form button {
+	padding: 0 35px;
+
+	background-color: #00ac66;
+	color: white;
+
+	border: none;
+	border-radius: 8px;
+
+	font-weight: 600;
+
+	cursor: pointer;
+}
+
+/* Effet au survol du bouton */
+.chat-form button:hover {
+	background-color: #009d5d;
 }

@@ -58,8 +58,11 @@
                 </span>
             </a>
 
-            <a href="#" class="book-details-message">
-                Envoyer un message
+            <a
+                href="/TomTroc-Project/?page=chat&id=<?= $book['user_id'] ?>"
+                class="book-details-message"
+            >
+                Écrire un message
             </a>
 
         </div>

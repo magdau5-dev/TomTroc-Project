@@ -13,10 +13,8 @@
     </div>
 
     <div>
-        <a href="#">
-            <span>◯</span>
-            <span>Messagerie</span>
-            <span>1</span>
+        <a href="/TomTroc-Project/?page=chat">
+            Messagerie
         </a>
 
         <a href="/TomTroc-Project/?page=profile">

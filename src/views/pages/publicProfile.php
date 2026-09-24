@@ -37,7 +37,10 @@ $memberSince = $createdAt->diff($today)->y;
                 <?= count($books) ?> livre<?= count($books) > 1 ? 's' : '' ?>
             </p>
 
-            <a href="#" class="public-profile-message">
+            <a
+                href="/TomTroc-Project/?page=chat&id=<?= $user['id'] ?>"
+                class="public-profile-message"
+            >
                 Écrire un message
             </a>
 
