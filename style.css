@@ -1431,3 +1431,185 @@ nav > div:last-of-type a:first-child span:last-child {
 .add-book-infos button:hover {
     background-color: #009d5d;
 }
+
+/* ========================= */
+/* PAGE PUBLIC PROFILE */
+/* ========================= */
+
+/* Page du profil public */
+.public-profile-page {
+    padding: 100px 0 150px;
+}
+
+
+/* Contient le profil à gauche et les livres à droite */
+.public-profile-container {
+    width: 80%;
+    max-width: 1140px;
+    margin: auto;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+
+/* Carte contenant les informations de l'utilisateur */
+.public-profile-user {
+    width: 340px;
+    min-width: 340px;
+    min-height: 580px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    padding: 45px 50px;
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* Avatar de l'utilisateur */
+.public-profile-avatar {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    margin-bottom: 65px;
+}
+
+
+/* Ligne sous l'avatar */
+.public-profile-line {
+    width: 100%;
+    height: 1px;
+
+    background-color: #e9e9e9;
+
+    margin-bottom: 45px;
+}
+
+
+/* Pseudo */
+.public-profile-username {
+    margin: 0 0 10px;
+
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/* Ancienneté */
+.public-profile-member {
+    margin: 0 0 28px;
+
+    color: #a6a6a6;
+    font-size: 14px;
+}
+
+
+/* Titre bibliothèque */
+.public-profile-library-title {
+    margin: 0 0 8px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* Nombre de livres */
+.public-profile-library-count {
+    margin: 0 0 45px;
+
+    font-size: 14px;
+}
+
+
+/* Bouton écrire un message */
+.public-profile-message {
+    display: block;
+
+    width: 215px;
+    margin: auto;
+
+    padding: 18px 10px;
+
+    border: 1px solid #00ac66;
+    border-radius: 8px;
+
+    color: #00ac66;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-sizing: border-box;
+}
+
+
+/* Tableau des livres */
+.public-profile-books {
+    flex: 1;
+
+    background-color: white;
+
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* En-tête du tableau */
+.public-profile-books th {
+    height: 50px;
+
+    padding: 0 30px;
+
+    text-align: left;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* Cellules du tableau */
+.public-profile-books td {
+    height: 128px;
+
+    padding: 0 30px;
+
+    vertical-align: middle;
+
+    font-size: 13px;
+
+    box-sizing: border-box;
+}
+
+
+/* Une ligne sur deux avec un fond gris clair */
+.public-profile-books tbody tr:nth-child(even) {
+    background-color: #edf2f5;
+}
+
+
+/* Image d'un livre */
+.public-profile-book-image {
+    width: 78px;
+    height: 80px;
+
+    object-fit: cover;
+}
+
+
+/* Description du livre */
+.public-profile-description {
+    width: 220px;
+
+    font-size: 12px;
+    line-height: 1.35;
+
+    font-style: italic;
+}

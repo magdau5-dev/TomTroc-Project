@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../models/User.php';
 require_once __DIR__ . '/../managers/UserManager.php';
 require_once __DIR__ . '/../core/View.php';
+require_once __DIR__ . '/../managers/BookManager.php';
 
 class UserController
 {
@@ -68,7 +69,7 @@ class UserController
         ]);
     }
 
-   public function login()
+    public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             return null;
@@ -122,6 +123,28 @@ class UserController
         $books = $bookManager->findByUserId($userId);
 
         View::render('profile', [
+            'user' => $user,
+            'books' => $books
+        ]);
+    }
+    
+    public function showPublicProfile(): void
+    {
+        $userId = (int) ($_GET['id'] ?? 0);
+
+        $userManager = new UserManager();
+        $bookManager = new BookManager();
+
+        $user = $userManager->findById($userId);
+
+        if (!$user) {
+            header('Location: /TomTroc-Project/?page=home');
+            exit;
+        }
+
+        $books = $bookManager->findByUserId($userId);
+
+        View::render('publicProfile', [
             'user' => $user,
             'books' => $books
         ]);

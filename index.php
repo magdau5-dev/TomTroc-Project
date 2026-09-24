@@ -56,6 +56,11 @@ switch ($page) {
         $controller->showProfile();
         break;
 
+    case 'publicProfile':
+        $controller = new UserController();
+        $controller->showPublicProfile();
+        break;
+
     default:
         $controller = new ErrorController();
         $controller->notFound();
