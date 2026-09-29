@@ -127,11 +127,69 @@ class UserController
             exit;
         }
 
+        $error = null;
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $username = trim($_POST['username'] ?? '');
+            $email = trim($_POST['email'] ?? '');
+            $password = $_POST['password'] ?? '';
+            $avatar = null;
+
+            if (!empty($_FILES['avatar']['name'])) {
+                $avatar = basename($_FILES['avatar']['name']);
+                $avatarPath = __DIR__ . '/../../public/img/avatars/' . $avatar;
+
+                move_uploaded_file(
+                    $_FILES['avatar']['tmp_name'],
+                    $avatarPath
+                );
+            }
+
+            if (empty($username) || empty($email)) {
+                $error = 'Le pseudo et l’adresse email sont obligatoires.';
+            } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $error = 'Adresse email invalide.';
+            } else {
+                $existingUser = $userManager->findByEmail($email);
+
+                if ($existingUser && (int) $existingUser['id'] !== $userId) {
+                    $error = 'Cette adresse email est déjà utilisée.';
+                } else {
+                    $hashedPassword = null;
+
+                    if (!empty($password)) {
+                        $hashedPassword = password_hash(
+                            $password,
+                            PASSWORD_DEFAULT
+                        );
+                    }
+
+                    $userManager->updateProfile(
+                        $userId,
+                        $username,
+                        $email,
+                        $hashedPassword
+                    );
+
+                    if ($avatar !== null) {
+                        $userManager->updateAvatar($userId, $avatar);
+                    }
+
+                    $_SESSION['username'] = $username;
+                    $_SESSION['email'] = $email;
+
+                    header('Location: /TomTroc-Project/?page=profile');
+                    exit;
+                }
+            }
+        }
+
         $books = $bookManager->findByUserId($userId);
 
         View::render('profile', [
             'user' => $user,
-            'books' => $books
+            'books' => $books,
+            'error' => $error
         ]);
     }
 
@@ -145,8 +203,10 @@ class UserController
         $user = $userManager->findById($userId);
 
         if (!$user) {
-            header('Location: /TomTroc-Project/?page=home');
-            exit;
+            View::render('notFound404', [
+                'message' => "Ce profil n'existe pas."
+            ]);
+            return;
         }
 
         $books = $bookManager->findByUserId($userId);

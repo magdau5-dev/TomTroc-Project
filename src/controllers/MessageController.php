@@ -29,7 +29,9 @@ class MessageController
             $receiverUser = $userManager->findById($userIdReceiver);
 
             if (!$receiverUser) {
-                View::render('notFound404');
+                View::render('notFound404', [
+                    'message' => "Cet utilisateur n'existe pas."
+                ]);
                 return;
             }
 

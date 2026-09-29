@@ -6,6 +6,8 @@ class ErrorController
 {
     public function notFound(): void
     {
-        View::render('notFound404');
+        View::render('notFound404', [
+            'message' => "Cette page n'existe pas."
+        ]);
     }
 }

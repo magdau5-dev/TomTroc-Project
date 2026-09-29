@@ -20,7 +20,8 @@ class BookController
         }
 
         View::render('books', [
-            'books' => $books
+            'books' => $books,
+            'search' => $search
         ]);
     }
 
@@ -33,7 +34,9 @@ class BookController
         $book = $bookManager->findById($id);
 
         if (!$book) {
-            View::render('notFound404');
+            View::render('notFound404', [
+                'message' => "Ce livre n'existe pas ou a été supprimé."
+            ]);
             return;
         }
 
@@ -98,7 +101,9 @@ class BookController
         $book = $bookManager->findById($id);
 
         if (!$book) {
-            View::render('notFound404');
+            View::render('notFound404', [
+                'message' => "Ce livre n'existe pas ou a été supprimé."
+            ]);
             return;
         }
 
@@ -155,7 +160,9 @@ class BookController
         $book = $bookManager->findById($id);
 
         if (!$book) {
-            View::render('notFound404');
+            View::render('notFound404', [
+                'message' => "Ce livre n'existe pas ou a été supprimé."
+            ]);
             return;
         }
 

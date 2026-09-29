@@ -31,11 +31,27 @@
 
         <div class="books-grid">
 
-            <?php foreach ($books as $book): ?>
+            <?php if (empty($books)): ?>
 
-                <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+                <p class="books-no-result">
 
-            <?php endforeach; ?>
+                    <?php if (!empty($search)): ?>
+                        Aucun livre ne correspond à votre recherche « <?= htmlspecialchars($search) ?> ».
+                    <?php else: ?>
+                        Aucun livre disponible pour le moment.
+                    <?php endif; ?>
+
+                </p>
+
+            <?php else: ?>
+
+                <?php foreach ($books as $book): ?>
+
+                    <?php require __DIR__ . '/../../../components/cardBook.php'; ?>
+
+                <?php endforeach; ?>
+
+            <?php endif; ?>
 
         </div>
 

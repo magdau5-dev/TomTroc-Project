@@ -24,9 +24,18 @@
 
                 </div>
 
-                <a href="#">
+                <label for="account-avatar" class="edit-avatar-link">
                     modifier
-                </a>
+                </label>
+
+                <input
+                    type="file"
+                    id="account-avatar"
+                    name="avatar"
+                    accept="image/*"
+                    form="profile-form"
+                    hidden
+                >
 
                 <hr>
 
@@ -61,13 +70,26 @@
             </article>
 
 
-            <article class="account-infos">
+            <article class="account-infos" id="account-infos">
 
                 <h2>
                     Vos informations personnelles
                 </h2>
 
-                <form>
+                <?php if (!empty($error)): ?>
+
+                    <p class="form-error">
+                        <?= htmlspecialchars($error) ?>
+                    </p>
+
+                <?php endif; ?>
+
+                <form
+                    id="profile-form"
+                    method="POST"
+                    action="/TomTroc-Project/?page=profile"
+                    enctype="multipart/form-data"
+                >
 
                     <label for="account-email">
                         Adresse email
@@ -76,6 +98,7 @@
                     <input
                         type="email"
                         id="account-email"
+                        name="email"
                         value="<?= htmlspecialchars($user['email']) ?>"
                     >
 
@@ -87,6 +110,7 @@
                     <input
                         type="password"
                         id="account-password"
+                        name="password"
                         placeholder="********"
                     >
 
@@ -98,6 +122,7 @@
                     <input
                         type="text"
                         id="account-username"
+                        name="username"
                         value="<?= htmlspecialchars($user['username']) ?>"
                     >
 

@@ -63,4 +63,62 @@ class UserManager
 
         return $user ?: null;
     }
+
+    public function updateProfile(
+        int $id,
+        string $username,
+        string $email,
+        ?string $password = null
+    ): void {
+        if ($password === null) {
+            $sql = "
+                UPDATE users
+                SET username = :username, email = :email
+                WHERE id = :id
+            ";
+
+            $query = $this->pdo->prepare($sql);
+
+            $query->execute([
+                'id' => $id,
+                'username' => $username,
+                'email' => $email
+            ]);
+
+            return;
+        }
+
+        $sql = "
+            UPDATE users
+            SET username = :username,
+                email = :email,
+                password = :password
+            WHERE id = :id
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'id' => $id,
+            'username' => $username,
+            'email' => $email,
+            'password' => $password
+        ]);
+    }
+
+    public function updateAvatar(int $id, string $avatar): void
+    {
+        $sql = "
+            UPDATE users
+            SET avatar = :avatar
+            WHERE id = :id
+        ";
+
+        $query = $this->pdo->prepare($sql);
+
+        $query->execute([
+            'id' => $id,
+            'avatar' => $avatar
+        ]);
+    }
 }
