@@ -627,28 +627,27 @@ nav > div:last-of-type a:first-child span:last-child {
 .book-details {
 	width: 100%;
 
-	background-color: #faf9f7;
+	background-color: #f5f3ef;
 }
 
 /* Petit chemin au-dessus du livre */
 .book-details-breadcrumb {
-	padding: 20px 0;
+	padding: 8px 0;
 
-	font-size: 12px;
+	font-size: 10px;
 	color: #a6a6a6;
 }
 
 /* Partie principale avec l'image et les informations */
 .book-details-content {
 	display: flex;
-
 	width: 100%;
 }
 
 /* Zone réservée à l'image du livre */
 .book-details-image {
 	width: 50%;
-	height: 863px;
+	height: calc(100vh - 134px);
 
 	overflow: hidden;
 	background-color: #e9e7e2;
@@ -666,9 +665,8 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Partie droite avec les informations */
 .book-details-info {
-	max-width: 600px;
-
-	padding: 70px 80px;
+	width: 50%;
+	padding: 72px 8%;
 
 	background-color: #faf9f7;
 }
@@ -706,11 +704,11 @@ nav > div:last-of-type a:first-child span:last-child {
 
 /* Petits titres DESCRIPTION et PROPRIÉTAIRE */
 .book-details-info h2 {
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 
-	font-size: 10px;
+	font-size: 8px;
 	font-weight: 600;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 }
 
 /* Paragraphes de description */
@@ -742,6 +740,7 @@ nav > div:last-of-type a:first-child span:last-child {
 
 	text-decoration: none;
 	color: #292929;
+	font-size: 14px;
 }
 
 /* Photo du propriétaire */
@@ -757,7 +756,7 @@ nav > div:last-of-type a:first-child span:last-child {
 /* Bouton Envoyer un message */
 .book-details-message {
 	width: 100%;
-	height: 63px;
+	height: 46px;
 
 	display: flex;
 	align-items: center;
@@ -768,7 +767,7 @@ nav > div:last-of-type a:first-child span:last-child {
 
 	text-decoration: none;
 
-	border-radius: 10px;
+	border-radius: 7px;
 
 	font-size: 16px;
 	font-weight: 600;
