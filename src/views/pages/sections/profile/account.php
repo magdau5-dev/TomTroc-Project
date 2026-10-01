@@ -34,6 +34,7 @@
                     name="avatar"
                     accept="image/*"
                     form="profile-form"
+                    onchange="this.form.submit()"
                     hidden
                 >
 

@@ -39,7 +39,7 @@
 
         </div>
 
-        <a href="#">
+        <a href="/TomTroc-Project/?page=books">
             Voir tous les livres
         </a>
 
