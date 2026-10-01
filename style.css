@@ -1424,6 +1424,7 @@ nav > div:last-of-type a:first-child span:last-child {
 .add-book-infos textarea,
 .add-book-infos select {
 	width: 100%;
+	font-family: Inter, sans-serif;
 
 	background-color: #edf2f5;
 	border: none;
@@ -1451,6 +1452,7 @@ nav > div:last-of-type a:first-child span:last-child {
 .add-book-infos button {
 	width: 75%;
 	height: 55px;
+	font-family: Inter, sans-serif;
 
 	margin-top: 15px;
 
