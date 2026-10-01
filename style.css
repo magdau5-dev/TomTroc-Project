@@ -1664,7 +1664,7 @@ nav > div:last-of-type a:first-child span:last-child {
 
 	display: flex;
 
-	min-height: 700px;
+	min-height: calc(100vh - 141px);
 
 	box-sizing: border-box;
 }
@@ -1675,7 +1675,7 @@ nav > div:last-of-type a:first-child span:last-child {
 	flex-shrink: 0;
 
 	background-color: #faf9f7;
-	padding: 50px 30px;
+	padding: 80px 0 50px;
 
 	box-sizing: border-box;
 }
@@ -1684,23 +1684,26 @@ nav > div:last-of-type a:first-child span:last-child {
 	font-family: 'Playfair Display', Georgia, serif;
 	font-size: 28px;
 
+	padding: 0 30px;
 	margin-bottom: 30px;
 }
 
 .chat-list-item {
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #faf9f7;
+
 	display: flex;
 	align-items: center;
 	gap: 14px;
 
-	padding: 14px;
-	border-radius: 10px;
+	padding: 14px 30px;
 	margin-bottom: 8px;
 
 	text-decoration: none;
 	color: inherit;
 }
 
-.chat-list-item:hover,
 .chat-list-item-active {
 	background-color: #ffffff;
 }
