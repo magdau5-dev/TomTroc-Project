@@ -54,7 +54,10 @@
 
 
     <div class="connexion-image">
-        <!-- Imag-->
+        <img
+            src="/TomTroc-Project/public/img/books/biblioBookSmall.png"
+            alt="Étagères remplies de livres"
+        >
     </div>
 
 </section>
