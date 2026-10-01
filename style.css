@@ -1927,7 +1927,7 @@ nav > div:last-of-type a:first-child span:last-child {
 
 .error-page {
 	width: 100%;
-	min-height: 60vh;
+	min-height: calc(100vh - 141px);
 
 	display: flex;
 	align-items: center;
@@ -1947,7 +1947,7 @@ nav > div:last-of-type a:first-child span:last-child {
 
 .error-page h1 {
 	font-family: 'Playfair Display', Georgia, serif;
-	font-size: 80px;
+	font-size: 160px;
 	font-weight: 400;
 
 	color: #292929;
