@@ -5,12 +5,13 @@
     <?php require_once __DIR__ . '/logo.php'; ?>
 
     <div>
-        <a
-            href="/TomTroc-Project/?page=home"
-            class="<?= $currentPage === 'home' ? 'nav-active' : '' ?>"
-        >
-            Accueil
-        </a>
+        <?php if ($currentPage === 'home'): ?>
+            <span class="nav-active" aria-current="page">Accueil</span>
+        <?php else: ?>
+            <a href="/TomTroc-Project/?page=home">
+                Accueil
+            </a>
+        <?php endif; ?>
 
         <a
             href="/TomTroc-Project/?page=books"

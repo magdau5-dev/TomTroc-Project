@@ -2,13 +2,13 @@
 
     <div class="footer-content">
 
-        <a href="#">
+        <span>
             Politique de confidentialité
-        </a>
+        </span>
 
-        <a href="#">
+        <span>
             Mentions légales
-        </a>
+        </span>
 
         <span>
             Tom Troc©
@@ -16,7 +16,7 @@
 
         <img
             src="/TomTroc-Project/public/img/shortLogo.png"
-            alt="Tom Troc"
+            alt=""
         >
 
     </div>

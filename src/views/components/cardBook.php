@@ -9,7 +9,7 @@
 
             <img
                 src="/TomTroc-Project/public/img/books/<?= htmlspecialchars($book['image']) ?>"
-                alt="<?= htmlspecialchars($book['title']) ?>"
+                alt=""
             >
 
         </div>

@@ -15,7 +15,7 @@
                 partage de connaissances et d'histoires à travers les livres.
             </p>
 
-            <a href="#">
+            <a href="/TomTroc-Project/?page=books">
                 Découvrir
             </a>
 
